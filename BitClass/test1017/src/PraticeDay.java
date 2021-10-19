@@ -1,20 +1,20 @@
 
 
 public class PraticeDay {
-    public static void main(String[] args) {
-        int n=6;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (i == j || i + j == n - 1) {
-                    System.out.print("*");
-                }
-                else{
-                    System.out.print(" ");
-                }
-            }
-            System.out.println();
-        }
-    }
+//    public static void main(String[] args) {
+//        int n=6;
+//        for (int i = 0; i < n; i++) {
+//            for (int j = 0; j < n; j++) {
+//                if (i == j || i + j == n - 1) {
+//                    System.out.print("*");
+//                }
+//                else{
+//                    System.out.print(" ");
+//                }
+//            }
+//            System.out.println();
+//        }
+//    }
 //    public static void main(String[] args) {
 //        int a=Integer.MAX_VALUE,count=0;
 //        for (int i = 32; i >= 0 ; i--) {
@@ -60,18 +60,18 @@ public class PraticeDay {
 //    }
 
 
-//    public static void main(String[] args) {
-//        double sum=0;
-//        for (int i = 1; i <= 100 ; i++) {
-//            if(i%2==1){
-//                sum+=1.0/i;
-//            }
-//            else{
-//                sum-=1.0/i;
-//            }
-//        }
-//        System.out.println(sum);
-//    }
+    public static void main(String[] args) {
+        double sum=0;
+        for (int i = 1; i <= 100 ; i++) {
+            if(i%2==1){
+                sum+=1.0/i;
+            }
+            else{
+                sum-=1.0/i;
+            }
+        }
+        System.out.println(sum);
+    }
 //    public static void main(String[] args) {
 //        for (int i = 0; i < 1000; i++) {
 //            if(isNarNumber(i))
