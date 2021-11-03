@@ -21,19 +21,6 @@ public class MyLinkedList {
 
     public ListNode head;//链表的头引用
 
-    public void createList() {
-        ListNode listNode1 = new ListNode(12);
-        ListNode listNode2 = new ListNode(23);
-        ListNode listNode3 = new ListNode(34);
-        ListNode listNode4 = new ListNode(45);
-        ListNode listNode5 = new ListNode(56);
-        listNode1.next = listNode2;
-        listNode2.next = listNode3;
-        listNode3.next = listNode4;
-        listNode4.next = listNode5;
-        listNode5.next = null;
-        this.head = listNode1;
-    }
 
     public void display() {
         //this.head.next != null
@@ -74,12 +61,6 @@ public class MyLinkedList {
         ListNode node = new ListNode(data);
         node.next = this.head;
         this.head = node;
-        /*if(this.head == null) {
-            this.head = node;
-        }else {
-            node.next = this.head;
-            this.head = node;
-        }*/
     }
 
     //尾插法
@@ -95,10 +76,28 @@ public class MyLinkedList {
             p1.next = p2;
         }
     }
-
+    public ListNode findIndex(int index){
+        ListNode cur=this.head;
+        while(index-1!=0){
+            cur=cur.next;
+            index--;
+        }
+        return cur;
+    }
     //任意位置插入,第一个数据节点为0号下标
-    public boolean addIndex(int index, int data) {
-        return false;
+    public void addIndex(int index, int data) {
+        if(index<0||index>size()){
+            System.out.println("输入位置不合法");
+        }else if(index==0){
+            addFirst(data);
+        }else if(index==size()){
+            addLast(data);
+        }else{
+            ListNode cur=findIndex(index);
+            ListNode tmp=new ListNode(data);
+            tmp.next=cur.next;
+            cur.next=tmp;
+        }
     }
 
     //删除第一次出现关键字为key的节点
@@ -139,7 +138,11 @@ public class MyLinkedList {
 
 
     public void clear() {
-
+        while(this.head!=null){
+            ListNode cur=head.next;
+            this.head.next=null;
+            this.head=cur;
+        }
     }
 
 }
