@@ -144,5 +144,18 @@ public class MyLinkedList {
             this.head=cur;
         }
     }
-
+    public ListNode findKth(int k){
+        if(k<=0||head==null) return null;
+        ListNode fast=head,slow=head;
+        while(k>0&&fast!=null){
+            fast=fast.next;
+            k--;
+        }
+        if(fast==null) return null;
+        while(fast!=null){
+            fast=fast.next;
+            slow=slow.next;
+        }
+        return slow;
+    }
 }
