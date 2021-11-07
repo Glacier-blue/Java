@@ -6,7 +6,7 @@ public class Main {
         list.addFirst(7);
         list.addIndex(1,9);
         list.display();
-        ListNode ret= list.findKth(9);
+        ListNode ret= list.findKth(1);
         System.out.println(ret.val);
     }
 }

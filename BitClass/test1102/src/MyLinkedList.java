@@ -145,13 +145,13 @@ public class MyLinkedList {
         }
     }
     public ListNode findKth(int k){
-        if(k<=0||head==null) return null;
-        ListNode fast=head,slow=head;
-        while(k>0&&fast!=null){
+        if(k<=0||this.head==null) return null;
+        ListNode fast=this.head,slow=this.head;
+        while(k>0){
+            if(fast==null) return null;
             fast=fast.next;
             k--;
         }
-        if(fast==null) return null;
         while(fast!=null){
             fast=fast.next;
             slow=slow.next;
