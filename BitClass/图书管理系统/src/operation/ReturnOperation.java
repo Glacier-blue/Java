@@ -4,19 +4,21 @@ import book.Book;
 import book.BookList;
 
 
-public class FindOperation implements IOperation{
+public class ReturnOperation implements IOperation{
     public void work(BookList bookList) {
-        System.out.println("查找图书！");
+        System.out.println("归还图书");
+        System.out.println("请输入你要归还的图书的名字：");
         String name = scanner.nextLine();
         int size = bookList.getUsedSize();
         for (int i = 0; i < size; i++) {
             Book book = bookList.getPos(i);
             if(name.equals(book.getName())) {
-                System.out.println("找到了这本书，信息如下：");
+                book.setBorrowed(false);
+                System.out.println("归还成功！");
                 System.out.println(book);
                 return;
             }
         }
-        System.out.println("没有找到这本书！");
+        System.out.println("没有你要归还的这本书！");
     }
 }
