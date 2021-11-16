@@ -9,7 +9,6 @@ import java.util.Scanner;
 
 public abstract class User {
     protected String name;
-
     protected IOperation[] iOperations;
 
     public User(String name) {
