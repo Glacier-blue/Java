@@ -19,21 +19,11 @@ public class BookList {
         this.usedSize = usedSize;
     }
 
-    /**
-     * 获取到pos位置的一本书
-     * @param pos
-     * @return
-     */
     public Book getPos(int pos) {
-        return this.books[pos];
+        return books[pos];
     }
 
-    /**
-     * 设置Pos下标为一本书-》[添加一本书]
-     * @param pos
-     * @param book
-     */
-    public void setBook(int pos,Book book) {
-        this.books[pos] = book;
+    public void setBook(int size,Book book) {
+        this.books[size]=book;
     }
 }

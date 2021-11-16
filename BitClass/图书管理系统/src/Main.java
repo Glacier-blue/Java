@@ -1,11 +1,9 @@
 import book.BookList;
 import user.Admin;
 import user.Ordinary;
-import user.Ordinary;
 import user.User;
 
 import java.util.Scanner;
-import user.*;
 
 public class Main {
 
