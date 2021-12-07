@@ -7,6 +7,6 @@ class C extends A{}
 public class TestDemo6 {
     List<A> list1=new ArrayList<>();
     List<B> list2=new ArrayList<>();
-    list1=list2;
-    list2=list1;
+    //list1=list2;
+    //list2=list1;
 }

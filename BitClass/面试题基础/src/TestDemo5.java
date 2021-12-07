@@ -9,7 +9,6 @@ public class TestDemo5 {
     public static void main(String[] args) {
         System.out.println(s=="123456");
         String s=A+"456";
-        System.out.println("s:"+s.hashCode());
         System.out.println(s=="123456");
     }
 }
