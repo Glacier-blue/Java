@@ -21,9 +21,6 @@ class Stu{
                 ", score=" + score +
                 '}';
     }
-
-
-
 }
 class ScoreComparator implements Comparator<Stu>{
     @Override
