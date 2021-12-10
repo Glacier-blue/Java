@@ -79,4 +79,28 @@ public class MySort {
         nums[i]=nums[j];
         nums[j]=tmp;
     }
+
+    public void quickSort(int[] nums){
+        quickSortFun(nums,0, nums.length-1);
+    }
+    private void quickSortFun(int[] nums,int left,int right){
+        if(left>=right) return;
+        int i=left;
+        int j=right;
+        int tmp=nums[i];
+        while(i<j){
+            while(i<j&&nums[j]>tmp){
+                j--;
+            }
+            nums[i]=nums[j];
+            while(i<j&&nums[i]<tmp){
+                i++;
+            }
+            nums[j]=nums[i];
+        }
+        nums[i]=tmp;
+        quickSortFun(nums,left,i);
+        quickSortFun(nums,i+1,right);
+    }
+
 }

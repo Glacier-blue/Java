@@ -6,7 +6,8 @@ public class TestDemo {
         MySort mySort=new MySort();
         //mySort.insertSort(nums);
         //mySort.shellSort(nums);
-        mySort.halfInsertSort(nums);
+        //mySort.halfInsertSort(nums);
+        mySort.quickSort(nums);
         System.out.println(Arrays.toString(nums));
     }
     public static void main1(String[] args) {
