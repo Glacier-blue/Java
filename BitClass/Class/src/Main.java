@@ -1,7 +1,7 @@
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         StackOfPlates stackOfPlates=new StackOfPlates(1);
         stackOfPlates.push(1);
         stackOfPlates.push(2);
@@ -10,7 +10,7 @@ public class Main {
         System.out.println(stackOfPlates.pop());
         System.out.println(stackOfPlates.pop());
     }
-    public static void main1(String[] args) {
+    public static void main(String[] args) {
         MinStack minStack=new MinStack();
         minStack.push(512);
         minStack.push(-1024);

@@ -20,6 +20,10 @@ class MinStack {
     }
 
     public void pop() {
+//        int ret=stack1.pop();
+//        if(ret==stack2.peek()){
+//            stack2.pop();
+//        }
         if(stack1.peek()==stack2.peek()){
             stack1.pop();
             stack2.pop();
