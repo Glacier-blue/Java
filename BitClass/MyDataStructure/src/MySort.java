@@ -102,5 +102,4 @@ public class MySort {
         quickSortFun(nums,left,i);
         quickSortFun(nums,i+1,right);
     }
-
 }
