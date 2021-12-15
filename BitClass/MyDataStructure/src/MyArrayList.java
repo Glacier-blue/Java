@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MyArrayList {
     public int[] elem;
@@ -104,4 +106,15 @@ public class MyArrayList {
         this.usedSize=0;
         System.out.println("成功清空表");
     }
+    public int depth(TreeNode root) {
+        if(root==null) return 0;
+        int leftDepth=depth(root.left);
+        int rightDepth=depth(root.right);
+        if(leftDepth>=0&&rightDepth>=0&&Math.abs(leftDepth-rightDepth)<=1){
+            return 1+Math.max(leftDepth,rightDepth);
+        }else{
+            return -1;
+        }
+    }
+
 }
