@@ -1,3 +1,4 @@
+import java.util.*;
 
 class TreeNode{
     int val;
@@ -18,13 +19,23 @@ class OperationTree{
         TreeNode F=new TreeNode(6);
         TreeNode G=new TreeNode(7);
         TreeNode H=new TreeNode(8);
+        TreeNode I=new TreeNode(9);
+        TreeNode J=new TreeNode(10);
+        TreeNode K=new TreeNode(11);
+        TreeNode L=new TreeNode(12);
+        TreeNode M=new TreeNode(13);
         A.left=B;
         A.right=C;
         B.left=D;
         B.right=E;
         C.left=F;
         C.right=G;
-        D.right=H;
+        D.left=H;
+        D.right=I;
+        E.left=J;
+        E.right=K;
+        F.left=L;
+        F.right=M;
         return A;
     }
     //递归先序访问
@@ -34,6 +45,23 @@ class OperationTree{
         prevOrder(root.left);
         prevOrder(root.right);
     }
+    //非递归先序遍历
+    public void prevOrderNor(TreeNode root){
+        if(root==null) return;
+        Stack<TreeNode> stack=new Stack<>();
+        TreeNode p=root;
+        while(p!=null||!stack.empty()){
+            if(p!=null){
+                stack.push(p);
+                System.out.print(p.val+" ");
+                p=p.left;
+            }else{
+                p=stack.pop();
+                p=p.right;
+            }
+        }
+        System.out.println();
+    }
     //递归中序访问
     public void inOrder(TreeNode root){
         if(root==null) return;
@@ -41,12 +69,70 @@ class OperationTree{
         System.out.print(root.val+" ");
         inOrder(root.right);
     }
+    //非递归中序遍历
+    public void inOrderNor(TreeNode root){
+        if(root==null) return;
+        TreeNode p=root;
+        Stack<TreeNode> stack=new Stack<>();
+        while(p!=null||!stack.empty()){
+            if(p!=null){
+                stack.push(p);
+                p=p.left;
+            }else{
+                p=stack.pop();
+                System.out.print(p.val+" ");
+                p=p.right;
+            }
+        }
+        System.out.println();
+    }
     //递归后序遍历
     public void postOrder(TreeNode root){
         if (root==null) return;
         postOrder(root.left);
         postOrder(root.right);
         System.out.print(root.val+" ");
+    }
+    //非递归后续遍历
+    public void postOrderNor(TreeNode root){
+        if(root==null) return;
+        Stack<TreeNode> stack=new Stack<>();
+        TreeNode p=root;
+        TreeNode r=null;
+        while(p!=null||!stack.empty()){
+            if(p!=null){
+                stack.push(p);
+                p=p.left;
+            }else{
+                p=stack.peek();
+                if(p.left!=null&&p.right!=r){
+                    p=p.right;
+                }else{
+                    p=stack.pop();
+                    System.out.print(p.val+" ");
+                    r=p;
+                    p=null;
+                }
+            }
+        }
+        System.out.println();
+    }
+    //层序遍历
+    public void leverOrder(TreeNode root){
+        if(root==null) return;
+        Queue<TreeNode> queue=new LinkedList<>();
+        TreeNode p=root;
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            p=queue.poll();
+            if(p!=null){
+                queue.offer(p.left);
+                queue.offer(p.right);
+                System.out.print(p.val+" ");
+            }
+            p=null;
+        }
+        System.out.println();
     }
     //递归得到节点数
     public void getSize1(TreeNode root,int[] size){
@@ -107,7 +193,36 @@ class OperationTree{
             return (q.val==p.val)&&isSameTree(q.left,p.left)&&isSameTree(q.right, p.right);
         }
     }
-
+    public void mirror(TreeNode root){
+        if(root==null) return;
+        TreeNode left=root.left;
+        TreeNode right=root.right;
+        root.left=right;
+        root.right=left;
+        mirror(root.left);
+        mirror(root.right);
+    }
+    public boolean isCompleteTree(TreeNode root){
+        if(root==null) return true;
+        Queue<TreeNode> queue=new LinkedList<>();
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            TreeNode tmp= queue.poll();
+            if(tmp!=null){
+                queue.offer(tmp.left);
+                queue.offer(tmp.right);
+            }else{
+                break;
+            }
+        }
+        while(!queue.isEmpty()){
+            TreeNode tmp= queue.poll();
+            if(tmp==null){
+                return false;
+            }
+        }
+        return true;
+    }
 
 
 
@@ -118,15 +233,21 @@ public class MyTree {
     public static void main(String[] args) {
         OperationTree operationTree=new OperationTree();
         TreeNode root=operationTree.creatTree();
-        System.out.print("先序遍历：");
+        System.out.print("先序遍历1：");
         operationTree.prevOrder(root);
         System.out.println();
-        System.out.print("中序遍历：");
+        System.out.print("先序遍历2：");
+        operationTree.prevOrderNor(root);
+        System.out.print("中序遍历1：");
         operationTree.inOrder(root);
         System.out.println();
-        System.out.print("后序遍历：");
+        System.out.print("中序遍历2：");
+        operationTree.inOrderNor(root);
+        System.out.print("后序遍历1：");
         operationTree.postOrder(root);
         System.out.println();
+        System.out.print("后序遍历2：");
+        operationTree.postOrderNor(root);
         System.out.println("节点个数测试");
         int[] size=new int[1];
         operationTree.getSize1(root,size);
@@ -146,6 +267,15 @@ public class MyTree {
         System.out.println(operationTree.find(root, 8).val);
         System.out.println("树的高度测试：");
         System.out.println(operationTree.getHeight(root));
+        System.out.println("镜像测试：");
+        operationTree.mirror(root);
+        operationTree.prevOrder(root);
+        operationTree.mirror(root);
+        System.out.println();
+        System.out.println("层序遍历测试：");
+        operationTree.leverOrder(root);
+        System.out.println("完全二叉树判断：");
+        System.out.println(operationTree.isCompleteTree(root));
     }
 
 }
