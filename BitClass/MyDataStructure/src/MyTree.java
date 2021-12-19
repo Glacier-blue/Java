@@ -1,5 +1,6 @@
 import java.util.*;
 
+
 class TreeNode{
     int val;
     public TreeNode left;
@@ -10,6 +11,23 @@ class TreeNode{
     public TreeNode(){}
 }
 class OperationTree{
+
+    //通过先序遍历创建一颗树
+//    static int i=0;
+//    public TreeNode creatTreeByPrevOrder(String str){
+//        if(str==null) return null;
+//        TreeNode root=null;
+//        if(str.charAt(i)!='#'){
+//            root=new TreeNode(str.charAt(i));
+//            i++;
+//            root.left=creatTreeByPrevOrder(str);
+//            root.right=creatTreeByPrevOrder(str);
+//        }else{
+//            i++;
+//        }
+//        return root;
+//    }
+    //穷举法创建一颗树
     public TreeNode creatTree(){
         TreeNode A=new TreeNode(1);
         TreeNode B=new TreeNode(2);
@@ -38,7 +56,7 @@ class OperationTree{
         F.right=M;
         return A;
     }
-    //递归先序访问
+    //递归先序遍历
     public void prevOrder(TreeNode root){
         if(root==null) return;
         System.out.print(root.val+" ");
@@ -62,7 +80,7 @@ class OperationTree{
         }
         System.out.println();
     }
-    //递归中序访问
+    //递归中序遍历
     public void inOrder(TreeNode root){
         if(root==null) return;
         inOrder(root.left);
@@ -178,6 +196,7 @@ class OperationTree{
         if(root.val==find) return root;
         return find(root.left,find)==null?find(root.right,find):find(root.left,find);
     }
+    //得到树的长度
     public int getHeight(TreeNode root){
         if(root==null) return 0;
         return 1+Math.max(getHeight(root.left),getHeight(root.right));
@@ -193,6 +212,7 @@ class OperationTree{
             return (q.val==p.val)&&isSameTree(q.left,p.left)&&isSameTree(q.right, p.right);
         }
     }
+    //将二叉树变成对称二叉树
     public void mirror(TreeNode root){
         if(root==null) return;
         TreeNode left=root.left;
@@ -202,6 +222,7 @@ class OperationTree{
         mirror(root.left);
         mirror(root.right);
     }
+    //判断是不是完全二叉树
     public boolean isCompleteTree(TreeNode root){
         if(root==null) return true;
         Queue<TreeNode> queue=new LinkedList<>();
@@ -223,11 +244,6 @@ class OperationTree{
         }
         return true;
     }
-
-
-
-
-
 }
 public class MyTree {
     public static void main(String[] args) {
