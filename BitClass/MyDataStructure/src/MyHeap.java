@@ -20,6 +20,7 @@ public class MyHeap {
             adjustDown(i,usedSize);
         }
     }
+    //建堆进行向下调整
     private void adjustDown(int k,int usedSize){
         int parent=k;
         int child=2*k+1;
@@ -34,9 +35,9 @@ public class MyHeap {
             }else {
                 break;
             }
-
         }
     }
+    //进堆后进行向上调整
     private void adjustUp(int child){
         while(child>0){
             int parent=(child-1)/2;
@@ -48,6 +49,7 @@ public class MyHeap {
             }
         }
     }
+    //入队操作
     public void offer(int val) {
         if(isFull()) {
             //扩容
