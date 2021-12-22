@@ -82,20 +82,9 @@ public class MyHeap {
         return this.elem[0];
     }
 
-
-
-
     private void swap(int[] arr,int i,int j){
         int tmp=arr[i];
         arr[i]=arr[j];
         arr[j]=tmp;
     }
-
-    public static void main(String[] args) {
-        int[] arr={1,4,2,5,6,3,7,9,0};
-        MyHeap myHeap=new MyHeap(20);
-        myHeap.creatHeap(arr);
-        System.out.println();
-    }
-
 }

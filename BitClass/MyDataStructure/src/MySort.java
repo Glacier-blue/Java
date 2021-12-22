@@ -138,10 +138,4 @@ public class MySort {
         }
     }
 
-    public static void main(String[] args) {
-        MySort mySort=new MySort();
-        int[] nums={1,33,6,5,4,2,0,9,8,7,6};
-        mySort.heapSort(nums);
-        System.out.println(Arrays.toString(nums));
-    }
 }

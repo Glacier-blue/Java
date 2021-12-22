@@ -1,17 +1,7 @@
 import java.util.*;
 
 
-class TreeNode{
-    int val;
-    public TreeNode left;
-    public TreeNode right;
-    public TreeNode(int val){
-        this.val=val;
-    }
-    public TreeNode(){}
-}
-class OperationTree{
-
+public class OperationTree {
     //通过先序遍历创建一颗树
 //    static int i=0;
 //    public TreeNode creatTreeByPrevOrder(String str){
@@ -243,55 +233,6 @@ class OperationTree{
             }
         }
         return true;
-    }
-}
-public class MyTree {
-    public static void main(String[] args) {
-        OperationTree operationTree=new OperationTree();
-        TreeNode root=operationTree.creatTree();
-        System.out.print("先序遍历1：");
-        operationTree.prevOrder(root);
-        System.out.println();
-        System.out.print("先序遍历2：");
-        operationTree.prevOrderNor(root);
-        System.out.print("中序遍历1：");
-        operationTree.inOrder(root);
-        System.out.println();
-        System.out.print("中序遍历2：");
-        operationTree.inOrderNor(root);
-        System.out.print("后序遍历1：");
-        operationTree.postOrder(root);
-        System.out.println();
-        System.out.print("后序遍历2：");
-        operationTree.postOrderNor(root);
-        System.out.println("节点个数测试");
-        int[] size=new int[1];
-        operationTree.getSize1(root,size);
-        System.out.println(size[0]);
-        System.out.println(operationTree.getSize2(root));
-        System.out.println("叶子节点数测试");
-        int[] size2=new int[1];
-        operationTree.getLeafSize1(root,size2);
-        System.out.println(size2[0]);
-        System.out.println(operationTree.getLeafSize2(root));
-        System.out.println("测试K层节点数");
-        System.out.println(operationTree.getKLevelSize(root,1));
-        System.out.println(operationTree.getKLevelSize(root,2));
-        System.out.println(operationTree.getKLevelSize(root,3));
-        System.out.println(operationTree.getKLevelSize(root,4));
-        System.out.println("查找节点测试");
-        System.out.println(operationTree.find(root, 8).val);
-        System.out.println("树的高度测试：");
-        System.out.println(operationTree.getHeight(root));
-        System.out.println("镜像测试：");
-        operationTree.mirror(root);
-        operationTree.prevOrder(root);
-        operationTree.mirror(root);
-        System.out.println();
-        System.out.println("层序遍历测试：");
-        operationTree.leverOrder(root);
-        System.out.println("完全二叉树判断：");
-        System.out.println(operationTree.isCompleteTree(root));
     }
 
 }

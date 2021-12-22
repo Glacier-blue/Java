@@ -1,13 +1,9 @@
+import java.util.Arrays;
 import java.util.Stack;
 
-class ListNode{
-    int val;
-    ListNode next;
-    public ListNode(){}
-    public ListNode(int val){
-        this.val=val;
-    }
-}
+
+
+
 public class MyStack {
     private ListNode head=null;
     public MyStack(){
@@ -35,5 +31,5 @@ public class MyStack {
             return this.head.val;
         }
     }
-
 }
+
