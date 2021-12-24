@@ -2,13 +2,18 @@ import java.util.Arrays;
 
 public class MySort {
 
-    //直接插入排序
+    /**
+     * 名称：直接插入排序
+     * 时间复杂度：O(n^2)
+     * 空间复杂度：O(1)
+     * 稳定性：稳定
+     */
     public void insertSort(int[] nums){
         for(int i=1;i<nums.length;i++){
             if(nums[i]<nums[i-1]){
                 int tmp=nums[i];
-                int j;
-                for(j=i-1;j>=0&&nums[j]>tmp;j--){
+                int j=i-1;
+                for(;j>=0&&nums[j]>tmp;j--){
                     nums[j+1]=nums[j];
                 }
                 nums[j+1]=tmp;
@@ -37,22 +42,31 @@ public class MySort {
             }
         }
     }
-    //希尔排序
+
+    /**
+     * 名称：希尔排序
+     * 时间复杂度：n^1.3---n^1.5
+     * 空间复杂度：O(1)
+     * 稳定性：不稳定
+     * 技巧：具有跳跃变化的都是不稳定的排序
+     */
     public void shellSort(int[] nums){
-        for(int i=nums.length/2;i>=1;i/=2){
-            for(int j=i;j< nums.length;j+=i){
-                if(nums[j]<nums[j-i]) {
-                    int tmp = nums[j];
-                    int k;
-                    for (k = j - i;k>=0&&nums[k]>tmp; k -= i) {
-                        nums[k + i] = nums[k];
+        for(int gap=nums.length/2;gap>=1;gap/=2){
+
+            for(int i=gap;i< nums.length;i++){
+                if(nums[i]<nums[i-gap]) {
+                    int tmp = nums[i];
+                    int j=i-gap;
+                    for (;j>=0&&nums[j]>tmp; j -= gap) {
+                        nums[j + gap] = nums[j];
                     }
-                    nums[k+i] = tmp;
+                    nums[j+gap] = tmp;
                 }
             }
-
         }
     }
+
+
     //选择排序
     public void selectSort(int[] nums){
         for(int i=0;i< nums.length;i++){
@@ -65,6 +79,7 @@ public class MySort {
             swap(nums,i,min);
         }
     }
+
     //冒泡排序
     public void bubbleSort(int[] nums){
         for(int i=0;i< nums.length;i++){
@@ -75,7 +90,7 @@ public class MySort {
                     swap(nums,j-1,j);
                 }
             }
-            if(isSwap==false){
+            if(!isSwap){
                 break;
             }
         }
@@ -85,31 +100,13 @@ public class MySort {
         nums[i]=nums[j];
         nums[j]=tmp;
     }
-    //快速排序
-    public void quickSort(int[] nums){
-        quickSortFun(nums,0, nums.length-1);
-    }
-    private void quickSortFun(int[] nums,int left,int right){
-        if(left>=right) return;
-        int i=left;
-        int j=right;
-        int tmp=nums[i];
-        while(i<j){
-            while(i<j&&nums[j]>tmp){
-                j--;
-            }
-            nums[i]=nums[j];
-            while(i<j&&nums[i]<tmp){
-                i++;
-            }
-            nums[j]=nums[i];
-        }
-        nums[i]=tmp;
-        quickSortFun(nums,left,i);
-        quickSortFun(nums,i+1,right);
-    }
 
     //堆排序
+
+    /**
+     * 1、建堆
+     * 2、进行调整
+     */
     public void heapSort(int[] nums){
         for(int i= nums.length/2-1;i>=0;i--){
             adjustDown(nums,i, nums.length);
@@ -137,5 +134,45 @@ public class MySort {
             }
         }
     }
-
+    //快速排序
+    public void quickSort(int[] nums){
+        quickSortFun1(nums,0, nums.length-1);
+    }
+    private void quickSortFun1(int[] nums,int left,int right){
+        if(left>=right) return;
+        int i=left;
+        int j=right;
+        int pivot=nums[i];
+        while(i<j){
+            while(i<j&&nums[j]>=pivot){
+                j--;
+            }
+            nums[i]=nums[j];
+            while(i<j&&nums[i]<=pivot){
+                i++;
+            }
+            nums[j]=nums[i];
+        }
+        nums[i]=pivot;
+        quickSortFun1(nums,left,i);
+        quickSortFun1(nums,i+1,right);
+    }
+    private void quickSortFun2(int[] nums,int left,int right){
+        if(left>=right) return;
+        int i=left;
+        int j=right;
+        int pivot=nums[left];
+        while(i<j){
+            while(i<j&&nums[j]>=pivot){
+                j--;
+            }
+            while(i<j&&nums[i]<=pivot){
+                i++;
+            }
+            swap(nums,i,j);
+        }
+        swap(nums,i,left);
+        quickSortFun2(nums,left,i);
+        quickSortFun2(nums,i+1,right);
+    }
 }

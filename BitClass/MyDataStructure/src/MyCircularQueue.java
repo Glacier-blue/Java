@@ -1,52 +1,54 @@
 //循环队列
-public class MyCircularQueue {
-    private int[] elem;//存储数组
-    private int rear;//指向头部
-    private int front;//指向尾巴
-    private int length;//数组长度
-    boolean flag=false;//标志
-    public MyCircularQueue(int k){
-        elem=new int[k];
-        length=k;
+class MyCircularQueue {
+    private int[] elem;
+    private int len;
+    private int front;
+    private int rear;
+    private boolean flag=false;
+    public MyCircularQueue(int k) {
+        this.elem=new int[k];
+        this.len=k;
+        this.front=0;
+        this.rear=0;
     }
-    //循环队列需要对头指针相加进行特殊处理
-    public void enQueue(int x){
-        if(!isFull()){
-            elem[rear]=x;
-            rear=(rear+1)%length;
-            flag=true;
-        }
+
+    public boolean enQueue(int value) {
+        if(isFull())  return false;
+        elem[this.rear]=value;
+        this.rear=(this.rear+1)%this.len;
+        flag=true;
+        return true;
     }
-    public int deQueue(){
+
+    public boolean deQueue() {
+        if(isEmpty()) return false;
+        this.front=(this.front+1)%this.len;
+        flag=false;
+        return true;
+    }
+
+    public int Front() {
         if(!isEmpty()){
-            int x=elem[front];
-            front=(front+1)%length;
-            flag=false;
-            return x;
+            return this.elem[this.front];
         }else{
             return -1;
         }
     }
-    public int Front(){
+
+    public int Rear() {
         if(!isEmpty()){
-            return elem[front];
-        }else{
-            return -1;
-        }
-    }
-    public int Rear(){
-        if(!isEmpty()){
-            int index=rear==0?length-1:rear-1;
+            int index=(this.rear==0)?len-1:this.rear-1;
             return elem[index];
         }else{
             return -1;
         }
     }
-    public boolean isFull(){
-        return front==rear&&flag;
-    }
-    public boolean isEmpty(){
-        return front==rear&&!flag;
+
+    public boolean isEmpty() {
+        return this.rear==this.front&&!this.flag;
     }
 
+    public boolean isFull() {
+        return this.flag&&this.rear==this.front;
+    }
 }

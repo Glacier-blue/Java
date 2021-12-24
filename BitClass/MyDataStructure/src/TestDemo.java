@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Stack;
 
 public class TestDemo {
@@ -66,11 +67,44 @@ public class TestDemo {
         System.out.println(myQueue.poll());
 
     }
-    public static void main3(String[] args) {
+    public static void main(String[] args) {
         MySort mySort=new MySort();
-        int[] nums={1,33,6,5,4,2,0,9,8,7,6};
-        mySort.heapSort(nums);
-        System.out.println(Arrays.toString(nums));
+        Random random = new Random();
+        int[] nums1=new int[100000];
+        int[] nums2=new int[100000];
+        for(int i=0;i<100000;i++){
+            nums1[i]= random.nextInt(10_0000);
+            nums2[i]=nums1[i];
+        }
+//        mySort.heapSort(nums);
+//        long start=System.currentTimeMillis();
+//        mySort.insertSort(nums1);
+//        long end=System.currentTimeMillis();
+//        System.out.println(end-start);
+//
+//        start=System.currentTimeMillis();
+//        mySort.shellSort(nums2);
+//        end=System.currentTimeMillis();
+//        System.out.println(end-start);
+
+
+
+//        long start1=System.currentTimeMillis();
+//        mySort.quickSort(nums1);
+//        long end1=System.currentTimeMillis();
+//        System.out.println(end1-start1);
+
+
+//        long start2=System.currentTimeMillis();
+//        mySort.quickSort(nums2);
+//        long end2=System.currentTimeMillis();
+//        System.out.println(end2-start2);
+
+
+
+
+
+//        System.out.println(Arrays.toString(nums1));
     }
     public static void main2(String[] args) {
         int[] arr={1,4,2,5,6,3,7,9,0};
