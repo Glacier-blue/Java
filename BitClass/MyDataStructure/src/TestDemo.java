@@ -70,12 +70,22 @@ public class TestDemo {
     public static void main(String[] args) {
         MySort mySort=new MySort();
         Random random = new Random();
-        int[] nums1=new int[100000];
-        int[] nums2=new int[100000];
-        for(int i=0;i<100000;i++){
+        int[] nums1=new int[10000];
+        int[] nums2=new int[10000];
+        for(int i=0;i<10000;i++){
             nums1[i]= random.nextInt(10_0000);
             nums2[i]=nums1[i];
         }
+        long start=System.currentTimeMillis();
+        mySort.heapSort(nums1);
+        long end=System.currentTimeMillis();
+        System.out.println(end-start);
+
+        start=System.currentTimeMillis();
+//        mySort.quickSort(nums1);
+//        Arrays.sort(nums2);
+        end=System.currentTimeMillis();
+        System.out.println(end-start);
 //        mySort.heapSort(nums);
 //        long start=System.currentTimeMillis();
 //        mySort.insertSort(nums1);
