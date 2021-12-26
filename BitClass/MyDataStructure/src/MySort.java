@@ -21,6 +21,20 @@ public class MySort {
             }
         }
     }
+    public void insertSort(int[] nums,int start,int end){
+        if(start>=nums.length) return;
+        if(end>= nums.length) end=nums.length-1;
+        for(int i=start+1;i<=end;i++){
+            if(nums[i]<nums[i-1]){
+                int tmp=nums[i];
+                int j=i-1;
+                for(;j>=0&&nums[j]>tmp;j--){
+                    nums[j+1]=nums[j];
+                }
+                nums[j+1]=tmp;
+            }
+        }
+    }
     //折半插入排序
     public void halfInsertSort(int[] nums){
         for(int i=1;i<nums.length;i++){
@@ -39,7 +53,6 @@ public class MySort {
                     nums[j]=nums[j-1];
                 }
                 nums[left]=tmp;
-
             }
         }
     }
@@ -53,7 +66,6 @@ public class MySort {
      */
     public void shellSort(int[] nums){
         for(int gap=nums.length/2;gap>=1;gap/=2){
-
             for(int i=gap;i< nums.length;i++){
                 if(nums[i]<nums[i-gap]) {
                     int tmp = nums[i];
@@ -66,7 +78,6 @@ public class MySort {
             }
         }
     }
-
 
     //选择排序
     public void selectSort(int[] nums){
@@ -102,8 +113,6 @@ public class MySort {
         nums[j]=tmp;
     }
 
-    //堆排序
-
     /**
      * 1、建堆
      * 2、进行调整
@@ -135,10 +144,23 @@ public class MySort {
             }
         }
     }
-    //快速排序
-    public void quickSort(int[] nums,int num){
 
-        quickSortFun1(nums,0, nums.length-1);
+    /**
+     * 1、快速排序
+     * 2、递归和非递归两种写法
+     * 3、主要实现有挖坑填坑法以及霍尔法
+     * 4、优化：固定下标，随机下标，三数取中法
+     * 5、当数据量较低时可以进行直接插入排序
+     * 5、时间复杂都：
+     * 6、空间复杂度：
+     */
+    public void quickSort(int[] nums,int num){
+        if(num==1)
+            quickSortFun1(nums,0, nums.length-1);
+        if(num==2)
+            quickSortFun2(nums,0, nums.length-1);
+        if(num==3)
+            quickSortFun3(nums);
     }
     private void selectPivotMidOfThree(int[] nums,int start,int end){
         //nums[mid]<=nums[start]<=nums[end]
@@ -147,13 +169,14 @@ public class MySort {
         if(nums[mid]>nums[end]) swap(nums,mid,end);
         if(nums[mid]>nums[start]) swap(nums,mid,start);
     }
-    private void insertSort(int[] nums,int start,int end){
-
-    }
     //挖坑填坑法
     private void quickSortFun1(int[] nums,int left,int right){
         if(left>=right) return;
         selectPivotMidOfThree(nums,left,right);
+        if(right-left<50){
+            insertSort(nums,left,right);
+            return;
+        }
         int i=left;
         int j=right;
         int pivot=nums[i];
@@ -175,6 +198,10 @@ public class MySort {
     private void quickSortFun2(int[] nums,int left,int right){
         if(left>=right) return;
         selectPivotMidOfThree(nums,left,right);
+        if(right-left<50){
+            insertSort(nums,left,right);
+            return;
+        }
         int i=left;
         int j=right;
         int pivot=nums[left];
@@ -207,7 +234,7 @@ public class MySort {
         nums[left]=tmp;
         return left;
     }
-    public void quickSortFun3(int[] nums){
+    private void quickSortFun3(int[] nums){
         Stack<Integer> stack=new Stack<>();
         stack.push(0);
         stack.push(nums.length-1);
@@ -226,4 +253,7 @@ public class MySort {
             }
         }
     }
+
+
+
 }
