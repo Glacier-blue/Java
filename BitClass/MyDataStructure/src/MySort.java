@@ -1,4 +1,4 @@
-import java.util.Arrays;
+
 import java.util.Stack;
 
 public class MySort {
@@ -172,11 +172,11 @@ public class MySort {
     //挖坑填坑法
     private void quickSortFun1(int[] nums,int left,int right){
         if(left>=right) return;
-        selectPivotMidOfThree(nums,left,right);
         if(right-left<50){
             insertSort(nums,left,right);
             return;
         }
+        selectPivotMidOfThree(nums,left,right);
         int i=left;
         int j=right;
         int pivot=nums[i];
@@ -197,11 +197,11 @@ public class MySort {
     //霍尔法
     private void quickSortFun2(int[] nums,int left,int right){
         if(left>=right) return;
-        selectPivotMidOfThree(nums,left,right);
         if(right-left<50){
             insertSort(nums,left,right);
             return;
         }
+        selectPivotMidOfThree(nums,left,right);
         int i=left;
         int j=right;
         int pivot=nums[left];
@@ -253,7 +253,72 @@ public class MySort {
             }
         }
     }
-
-
+    public void mergeSort(int[] nums,int num){
+        if(num==1)
+            mergeInterval(nums,0, nums.length-1);
+        if(num==2)
+            mergeSort(nums);
+    }
+    private void mergeInterval(int[] nums,int left,int right){
+        if(left==right) return;
+        int mid=(left+right)/2;
+        mergeInterval(nums,left,mid);
+        mergeInterval(nums,mid+1,right);
+        mergeAnd(nums,left,right);
+    }
+    private void mergeAnd(int[] nums,int left,int right){
+        int s1=left;
+        int e1=(left+right)/2;
+        int s2=e1+1;
+        int e2=right;
+        int[] tmp=new int[right-left+1];
+        int k=0;
+        while(s1<=e1&&s2<=e2){
+            tmp[k++]=nums[s1]<=nums[s2]?nums[s1++]:nums[s2++];
+        }
+        while(s1<=e1){
+            tmp[k++]=nums[s1++];
+        }
+        while(s2<=e2){
+            tmp[k++]=nums[s2++];
+        }
+        for(int i=0;i<tmp.length;i++){
+            nums[i+left]=tmp[i];
+        }
+    }
+    private void mergeSort(int[] nums){
+        for(int i=1;i< nums.length;i*=2){
+            mergeAnd(nums,i);
+        }
+    }
+    private void mergeAnd(int[] nums,int gap){
+        int[] tmp=new int[nums.length];
+        int s1=0;
+        int e1=s1+gap-1;
+        int s2=e1+1;
+        int e2=s2+gap-1>= nums.length? nums.length-1:s2+gap-1;
+        int k=0;
+        while(s2<nums.length){
+            while(s1<=e1&&s2<=e2){
+                tmp[k++]=nums[s1]<=nums[s2]?nums[s1++]:nums[s2++];
+            }
+            while(s1<=e1){
+                tmp[k++]=nums[s1++];
+            }
+            while(s2<=e2){
+                tmp[k++]=nums[s2++];
+            }
+            s1=e2+1;
+            e1=s1+gap-1;
+            s2=e1+1;
+            e2=s2+gap-1>= nums.length? nums.length-1:s2+gap-1;
+        }
+        while(s1<nums.length){
+            tmp[k++]=nums[s1++];
+        }
+        for(int i=0;i< nums.length;i++){
+            nums[i]=tmp[i];
+        }
+    }
 
 }
