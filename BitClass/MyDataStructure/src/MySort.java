@@ -5,11 +5,14 @@ public class MySort {
 
     /**
      * 名称：直接插入排序
-     * 时间复杂度：O(n^2)
+     * 时间复杂度：
+     *          最坏时： O(n^2)
+     *          最好时： O(n)
      * 空间复杂度：O(1)
      * 稳定性：稳定
      */
     public void insertSort(int[] nums){
+//        insertSort(nums,0, nums.length-1);
         for(int i=1;i<nums.length;i++){
             if(nums[i]<nums[i-1]){
                 int tmp=nums[i];
@@ -79,7 +82,12 @@ public class MySort {
         }
     }
 
-    //选择排序
+    /**
+     * 名称：选择排序
+     * 时间复杂度：O(n^2)
+     * 空间复杂度：O(1)
+     * 稳定性：不稳定，有跳跃式变化
+     */
     public void selectSort(int[] nums){
         for(int i=0;i< nums.length;i++){
             int min=i;
@@ -92,7 +100,14 @@ public class MySort {
         }
     }
 
-    //冒泡排序
+    /**
+     * 名称：冒泡排序
+     * 时间复杂度：
+     *            最坏时：O(n^2)
+     *            最好时：O(n)
+     * 空间复杂度：O(1)
+     * 稳定性：稳定
+     */
     public void bubbleSort(int[] nums){
         for(int i=0;i< nums.length;i++){
             boolean isSwap=false;
@@ -116,6 +131,10 @@ public class MySort {
     /**
      * 1、建堆
      * 2、进行调整
+     * 名称：堆排序
+     * 时间复杂度:O(n*log2(n))
+     * 空间复杂度:O(1)
+     * 稳定性：不稳定
      */
     public void heapSort(int[] nums){
         for(int i= nums.length/2-1;i>=0;i--){
@@ -152,7 +171,12 @@ public class MySort {
      * 4、优化：固定下标，随机下标，三数取中法
      * 5、当数据量较低时可以进行直接插入排序
      * 5、时间复杂都：
+     *              最好时：O(n*log2(n))
+     *              最坏时：O(n^2)
      * 6、空间复杂度：
+     *              最好时：O(log2(n))
+     *              最坏时：O(n)
+     * 稳定性：不稳定
      */
     public void quickSort(int[] nums,int num){
         if(num==1)
@@ -253,6 +277,13 @@ public class MySort {
             }
         }
     }
+
+    /**
+     * 名称：归并排序
+     * 时间复杂度：O(n*log2(n))
+     * 空间复杂度：O(n)
+     * 稳定性：稳定
+     */
     public void mergeSort(int[] nums,int num){
         if(num==1)
             mergeInterval(nums,0, nums.length-1);
