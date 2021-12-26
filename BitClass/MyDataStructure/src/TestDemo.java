@@ -70,12 +70,71 @@ public class TestDemo {
     public static void main(String[] args) {
         MySort mySort=new MySort();
         Random random = new Random();
-        int[] nums=new int[10];
-        for(int i=0;i<10;i++){
-            nums[i]= random.nextInt(100);
+        int[] nums1=new int[10_0000];
+        for(int i=0;i< nums1.length;i++){
+            nums1[i]= random.nextInt(10_0000);
         }
-        mySort.quickSort(nums,0);
-        System.out.println(Arrays.toString(nums));
+        int[] nums2=nums1.clone();
+        int[] nums3=nums1.clone();
+        int[] nums4=nums1.clone();
+        int[] nums5=nums1.clone();
+        int[] nums6=nums1.clone();
+        int[] nums7=nums1.clone();
+        int[] nums8=nums1.clone();
+        int[] nums9=nums1.clone();
+        int[] nums10=nums1.clone();
+        long start,end;
+        start=System.currentTimeMillis();
+        mySort.insertSort(nums1);
+        end=System.currentTimeMillis();
+        System.out.println("插入排序："+(end-start));
+
+        start=System.currentTimeMillis();
+        mySort.shellSort(nums2);
+        end=System.currentTimeMillis();
+        System.out.println("希尔排序："+(end-start));
+
+        start=System.currentTimeMillis();
+        mySort.bubbleSort(nums3);
+        end=System.currentTimeMillis();
+        System.out.println("冒泡排序："+(end-start));
+
+        start=System.currentTimeMillis();
+        mySort.selectSort(nums4);
+        end=System.currentTimeMillis();
+        System.out.println("选择排序1："+(end-start));
+
+
+        start=System.currentTimeMillis();
+        mySort.heapSort(nums5);
+        end=System.currentTimeMillis();
+        System.out.println("堆排序："+(end-start));
+;
+        start=System.currentTimeMillis();
+        mySort.quickSort(nums6,1);
+        end=System.currentTimeMillis();
+        System.out.println("快速排序1："+(end-start));
+
+        start=System.currentTimeMillis();
+        mySort.quickSort(nums7,2);
+        end=System.currentTimeMillis();
+        System.out.println("快速排序2："+(end-start));
+
+        start=System.currentTimeMillis();
+        mySort.quickSort(nums8,3);
+        end=System.currentTimeMillis();
+        System.out.println("快速排序3："+(end-start));
+
+        start=System.currentTimeMillis();
+        mySort.mergeSort(nums9,1);
+        end=System.currentTimeMillis();
+        System.out.println("归并排序1："+(end-start));
+
+        start=System.currentTimeMillis();
+        mySort.mergeSort(nums10,2);
+        end=System.currentTimeMillis();
+        System.out.println("归并排序2："+(end-start));
+
     }
     public static void main2(String[] args) {
         int[] arr={1,4,2,5,6,3,7,9,0};
