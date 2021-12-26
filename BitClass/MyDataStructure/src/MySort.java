@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Stack;
 
 public class MySort {
 
@@ -135,11 +136,24 @@ public class MySort {
         }
     }
     //快速排序
-    public void quickSort(int[] nums){
+    public void quickSort(int[] nums,int num){
+
         quickSortFun1(nums,0, nums.length-1);
     }
+    private void selectPivotMidOfThree(int[] nums,int start,int end){
+        //nums[mid]<=nums[start]<=nums[end]
+        int mid=(start+end)/2;
+        if(nums[mid]>nums[start]) swap(nums,mid,start);
+        if(nums[mid]>nums[end]) swap(nums,mid,end);
+        if(nums[mid]>nums[start]) swap(nums,mid,start);
+    }
+    private void insertSort(int[] nums,int start,int end){
+
+    }
+    //挖坑填坑法
     private void quickSortFun1(int[] nums,int left,int right){
         if(left>=right) return;
+        selectPivotMidOfThree(nums,left,right);
         int i=left;
         int j=right;
         int pivot=nums[i];
@@ -157,8 +171,10 @@ public class MySort {
         quickSortFun1(nums,left,i);
         quickSortFun1(nums,i+1,right);
     }
+    //霍尔法
     private void quickSortFun2(int[] nums,int left,int right){
         if(left>=right) return;
+        selectPivotMidOfThree(nums,left,right);
         int i=left;
         int j=right;
         int pivot=nums[left];
@@ -174,5 +190,40 @@ public class MySort {
         swap(nums,i,left);
         quickSortFun2(nums,left,i);
         quickSortFun2(nums,i+1,right);
+    }
+    //快速排序的非递归写法
+    private int partition(int[] nums,int left,int right){
+        int tmp=nums[left];
+        while(left<right){
+            while(left<right&&nums[right]>=tmp){
+                right--;
+            }
+            nums[left]=nums[right];
+            while(left<right&&nums[left]<=tmp){
+                left++;
+            }
+            nums[right]=nums[left];
+        }
+        nums[left]=tmp;
+        return left;
+    }
+    public void quickSortFun3(int[] nums){
+        Stack<Integer> stack=new Stack<>();
+        stack.push(0);
+        stack.push(nums.length-1);
+        while(!stack.empty()){
+            int end=stack.pop();
+            int start=stack.pop();
+            selectPivotMidOfThree(nums,start,end);
+            int pivot=partition(nums,start,end);
+            if(start<pivot-1){
+                stack.push(start);
+                stack.push(pivot-1);
+            }
+            if(end>pivot+1){
+                stack.push(pivot+1);
+                stack.push(end);
+            }
+        }
     }
 }

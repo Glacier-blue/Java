@@ -70,51 +70,12 @@ public class TestDemo {
     public static void main(String[] args) {
         MySort mySort=new MySort();
         Random random = new Random();
-        int[] nums1=new int[10000];
-        int[] nums2=new int[10000];
-        for(int i=0;i<10000;i++){
-            nums1[i]= random.nextInt(10_0000);
-            nums2[i]=nums1[i];
+        int[] nums=new int[10];
+        for(int i=0;i<10;i++){
+            nums[i]= random.nextInt(100);
         }
-        long start=System.currentTimeMillis();
-        mySort.heapSort(nums1);
-        long end=System.currentTimeMillis();
-        System.out.println(end-start);
-
-        start=System.currentTimeMillis();
-//        mySort.quickSort(nums1);
-//        Arrays.sort(nums2);
-        end=System.currentTimeMillis();
-        System.out.println(end-start);
-//        mySort.heapSort(nums);
-//        long start=System.currentTimeMillis();
-//        mySort.insertSort(nums1);
-//        long end=System.currentTimeMillis();
-//        System.out.println(end-start);
-//
-//        start=System.currentTimeMillis();
-//        mySort.shellSort(nums2);
-//        end=System.currentTimeMillis();
-//        System.out.println(end-start);
-
-
-
-//        long start1=System.currentTimeMillis();
-//        mySort.quickSort(nums1);
-//        long end1=System.currentTimeMillis();
-//        System.out.println(end1-start1);
-
-
-//        long start2=System.currentTimeMillis();
-//        mySort.quickSort(nums2);
-//        long end2=System.currentTimeMillis();
-//        System.out.println(end2-start2);
-
-
-
-
-
-//        System.out.println(Arrays.toString(nums1));
+        mySort.quickSort(nums,0);
+        System.out.println(Arrays.toString(nums));
     }
     public static void main2(String[] args) {
         int[] arr={1,4,2,5,6,3,7,9,0};
