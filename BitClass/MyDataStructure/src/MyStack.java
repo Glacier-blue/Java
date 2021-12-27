@@ -1,8 +1,3 @@
-import java.util.Arrays;
-import java.util.Stack;
-
-
-
 
 public class MyStack {
     private ListNode head=null;
@@ -15,7 +10,7 @@ public class MyStack {
     }
     public int pop(){
         if(isEmpty()){
-            return -1;
+            throw new UnsupportedOperationException("栈为空");
         }
         int val=this.head.val;
         this.head=this.head.next;
