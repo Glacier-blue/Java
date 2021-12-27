@@ -72,7 +72,8 @@ public class OperationTree {
     }
     //递归中序遍历
     public void inOrder(TreeNode root){
-        if(root==null) return;
+        if(root==null)
+            return;
         inOrder(root.left);
         System.out.print(root.val+" ");
         inOrder(root.right);

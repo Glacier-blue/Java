@@ -3,7 +3,21 @@ import java.util.Random;
 import java.util.Stack;
 
 public class TestDemo {
-
+    public static void main(String[] args) {
+        OperationTree operationTree=new OperationTree();
+        BinarySearchTree binarySearchTree=new BinarySearchTree();
+        binarySearchTree.insert(1);
+        binarySearchTree.insert(5);
+        binarySearchTree.insert(6);
+        binarySearchTree.insert(4);
+        binarySearchTree.insert(2);
+        binarySearchTree.insert(3);
+        binarySearchTree.insert(8);
+        binarySearchTree.insert(0);
+        binarySearchTree.insert(9);
+        TreeNode root=binarySearchTree.getRoot();
+        operationTree.inOrder(root);
+    }
     public static void main6(String[] args) {
         OperationTree operationTree=new OperationTree();
         TreeNode root=operationTree.creatTree();
@@ -67,7 +81,7 @@ public class TestDemo {
         System.out.println(myQueue.poll());
 
     }
-    public static void main(String[] args) {
+    public static void main3(String[] args) {
         MySort mySort=new MySort();
         Random random = new Random();
         int[] nums1=new int[10_0000];
