@@ -4,10 +4,9 @@ class MyCircularQueue {
     private int len;
     private int front;
     private int rear;
-    private boolean flag=false;
     public MyCircularQueue(int k) {
-        this.elem=new int[k];
-        this.len=k;
+        this.elem=new int[k+1];
+        this.len=k+1;
         this.front=0;
         this.rear=0;
     }
@@ -16,14 +15,12 @@ class MyCircularQueue {
         if(isFull())  return false;
         elem[this.rear]=value;
         this.rear=(this.rear+1)%this.len;
-        flag=true;
         return true;
     }
 
     public boolean deQueue() {
         if(isEmpty()) return false;
         this.front=(this.front+1)%this.len;
-        flag=false;
         return true;
     }
 
@@ -45,10 +42,10 @@ class MyCircularQueue {
     }
 
     public boolean isEmpty() {
-        return this.rear==this.front&&!this.flag;
+        return this.rear==this.front;
     }
 
     public boolean isFull() {
-        return this.flag&&this.rear==this.front;
+        return (this.rear+1)%len==this.front;
     }
 }
