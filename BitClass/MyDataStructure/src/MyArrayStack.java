@@ -15,6 +15,9 @@ public class MyArrayStack{
         }
         elem[++size]=val;
     }
+    public int size(){
+        return this.size+1;
+    }
     public int peek(){
         if(!empty()){
             return elem[size];
