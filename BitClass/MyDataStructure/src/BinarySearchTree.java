@@ -62,10 +62,34 @@ public class BinarySearchTree {
                 parent.right=child.left;
             }
         }else{
+            TreeNode cur=child.right;
+            TreeNode prev=child;
+            while(cur.left!=null){
+                prev=cur;
+                cur=cur.left;
+            }
+            child.val=cur.val;
+            if(cur==prev.left){
+                prev.left=cur.right;
+            }else{
+                prev.right=cur.right;
+            }
 
         }
     }
-//    public void removeKey(TreeNode root,int key){
-//
-//    }
+    public void removeKey(int key){
+        TreeNode child=this.root;
+        TreeNode parent=null;
+        while (child!=null&&child.val!=key){
+            parent=child;
+            if(child.val>key){
+                child=child.left;
+            }else{
+                child=child.right;
+            }
+        }
+        if(child!=null){
+            remove(parent,child,root);
+        }
+    }
 }
