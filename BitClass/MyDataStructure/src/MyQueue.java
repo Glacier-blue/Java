@@ -3,6 +3,10 @@
 public class MyQueue {
     private ListNode head;
     private ListNode tail;
+    private int size;
+    public int size(){
+        return size;
+    }
     public void offer(int val){
         if(empty()){
             head=new ListNode(val);
@@ -11,6 +15,7 @@ public class MyQueue {
             tail.next=new ListNode(val);
             tail=tail.next;
         }
+        size++;
     }
     public int poll(){
         if(empty()){
@@ -18,6 +23,7 @@ public class MyQueue {
         }else{
             int ret= head.val;
             head=head.next;
+            size--;
             return ret;
         }
     }
