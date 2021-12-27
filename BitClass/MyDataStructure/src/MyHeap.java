@@ -6,9 +6,11 @@ public class MyHeap {
     public MyHeap(){
         elem=new int[10];
     }
+
     public MyHeap(int k){
         elem=new int[k];
     }
+
     public void creatHeap(int[] nums){
         //数组赋值
         for(int i=0;i<nums.length;i++){
@@ -20,6 +22,8 @@ public class MyHeap {
             adjustDown(i,usedSize);
         }
     }
+
+
     //建堆进行向下调整
     private void adjustDown(int k,int usedSize){
         int parent=k;
@@ -37,6 +41,8 @@ public class MyHeap {
             }
         }
     }
+
+
     //进堆后进行向上调整
     private void adjustUp(int child){
         while(child>0){
@@ -60,19 +66,15 @@ public class MyHeap {
         adjustUp(this.usedSize-1);//10下标
     }
 
-    public boolean isFull() {
-        return this.usedSize == this.elem.length;
-    }
     public void poll() {
         if(isEmpty()) {
             return;
         }
+        //交换到最后删除
         swap(elem,0,this.usedSize-1);
-        this.usedSize--;//9 删除了
+        this.usedSize--;
+        //除了第一个元素，其他都满足大堆条件，所以对零位置进行向下调整
         adjustDown(0,this.usedSize);
-    }
-    public boolean isEmpty() {
-        return this.usedSize == 0;
     }
 
     public int peek() {
@@ -80,6 +82,14 @@ public class MyHeap {
             throw new RuntimeException("队列为空");
         }
         return this.elem[0];
+    }
+    public boolean isFull() {
+        return this.usedSize == this.elem.length;
+    }
+
+
+    public boolean isEmpty() {
+        return this.usedSize == 0;
     }
 
     private void swap(int[] arr,int i,int j){
