@@ -2,8 +2,8 @@ import java.util.Arrays;
 
 
 public class MyArrayList {
-    public int[] elem;
-    public int usedSize;//有效的数据个数
+    private int[] elem;
+    private int usedSize;//有效的数据个数
     public MyArrayList() {
         this.elem = new int[10];
     }
@@ -21,7 +21,7 @@ public class MyArrayList {
         return this.usedSize;
     }
 
-    // 在 pos 位置新增元素，分析见后面
+    // 在 pos 位置新增元素
     public void add(int pos, int data) {
         if(pos<0||pos>this.usedSize){
             System.out.println("输入不合法");
@@ -102,18 +102,10 @@ public class MyArrayList {
     }
     // 清空顺序表
     public void clear() {
+        for(int i=0;i<this.usedSize;i++){
+            this.elem[i]=0;
+        }
         this.usedSize=0;
         System.out.println("成功清空表");
     }
-    public int depth(TreeNode root) {
-        if(root==null) return 0;
-        int leftDepth=depth(root.left);
-        int rightDepth=depth(root.right);
-        if(leftDepth>=0&&rightDepth>=0&&Math.abs(leftDepth-rightDepth)<=1){
-            return 1+Math.max(leftDepth,rightDepth);
-        }else{
-            return -1;
-        }
-    }
-
 }
