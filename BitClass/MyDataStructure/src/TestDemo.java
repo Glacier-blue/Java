@@ -3,20 +3,51 @@ import java.util.Random;
 import java.util.Stack;
 
 public class TestDemo {
-    public static void main(String[] args) {
+    public static void main8(String[] args) {
+        MyCircularQueue myCircularQueue=new MyCircularQueue(10);
+        System.out.println(myCircularQueue.isEmpty());
+        myCircularQueue.enQueue(1);
+        myCircularQueue.enQueue(2);
+        myCircularQueue.enQueue(3);
+        myCircularQueue.enQueue(4);
+        myCircularQueue.enQueue(5);
+        myCircularQueue.enQueue(6);
+        myCircularQueue.enQueue(7);
+        myCircularQueue.enQueue(8);
+        myCircularQueue.enQueue(9);
+        myCircularQueue.enQueue(10);
+        System.out.println(myCircularQueue.isFull());
+        System.out.println(myCircularQueue.Rear());
+        myCircularQueue.deQueue();
+        myCircularQueue.enQueue(11);
+        System.out.println(myCircularQueue.Rear());
+    }
+    public static void main7(String[] args) {
         OperationTree operationTree=new OperationTree();
         BinarySearchTree binarySearchTree=new BinarySearchTree();
-        binarySearchTree.insert(1);
         binarySearchTree.insert(5);
-        binarySearchTree.insert(6);
-        binarySearchTree.insert(4);
-        binarySearchTree.insert(2);
         binarySearchTree.insert(3);
-        binarySearchTree.insert(8);
+        binarySearchTree.insert(7);
+        binarySearchTree.insert(1);
+        binarySearchTree.insert(4);
+        binarySearchTree.insert(6);
+        binarySearchTree.insert(13);
         binarySearchTree.insert(0);
-        binarySearchTree.insert(9);
+        binarySearchTree.insert(2);
+        binarySearchTree.insert(12);
+        binarySearchTree.insert(19);
+        binarySearchTree.insert(27);
         TreeNode root=binarySearchTree.getRoot();
         operationTree.inOrder(root);
+        System.out.println();
+        operationTree.prevOrder(root);
+        System.out.println();
+        binarySearchTree.removeKey(13);
+        root=binarySearchTree.getRoot();
+        operationTree.inOrder(root);
+        System.out.println();
+        operationTree.prevOrder(root);
+        System.out.println();
     }
     public static void main6(String[] args) {
         OperationTree operationTree=new OperationTree();
