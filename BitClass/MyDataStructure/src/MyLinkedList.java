@@ -110,6 +110,7 @@ public class MyLinkedList {
             head.next = null;
             head = cur;
         }
+
         this.last = null;
         dummy = null;
     }
