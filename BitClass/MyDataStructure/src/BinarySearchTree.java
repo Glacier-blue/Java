@@ -1,6 +1,9 @@
 public class BinarySearchTree {
-
-    public TreeNode search(TreeNode root,int key){
+    private TreeNode root;
+    public TreeNode getRoot() {
+        return root;
+    }
+    public TreeNode search(int key){
         TreeNode cur=root;
         while(cur!=null){
             if(cur.val==key){
@@ -13,7 +16,7 @@ public class BinarySearchTree {
         }
         return null;
     }
-    public boolean insert(TreeNode root,int key){
+    public boolean insert(int key){
         if(root==null) {
             root=new TreeNode(key);
             return true;
@@ -41,9 +44,27 @@ public class BinarySearchTree {
         }
         return true;
     }
-//    private void remove(TreeNode parent,TreeNode child){
-//
-//    }
+    private void remove(TreeNode parent,TreeNode child,TreeNode root){
+        if(child.left==null){
+            if(child==root){
+                root=child.right;
+            }else if(child==parent.left){
+                parent.left=child.right;
+            }else{
+                parent.right=child.right;
+            }
+        }else if(child.right==null){
+            if(child==root){
+                root=child.left;
+            }else if(child==parent.left){
+                parent.left=child.left;
+            }else{
+                parent.right=child.left;
+            }
+        }else{
+
+        }
+    }
 //    public void removeKey(TreeNode root,int key){
 //
 //    }
