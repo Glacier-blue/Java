@@ -1,31 +1,7 @@
 import java.util.*;
 
 public class TestDemo {
-    public static void main(String[] args) {
-        HashMap<Integer,Integer> hashMap=new HashMap<>();
-        Set<Integer> hashSet=new HashSet<>();
-        Random random=new Random();
-        int[] nums=new int[10_0000];
-        for(int i=0;i< nums.length;i++){
-            nums[i]= random.nextInt(10000);
-        }
-        for(int i=0;i< nums.length;i++){
-            if(hashSet.contains(nums[i])){
-                System.out.println(nums[i]);
-                break;
-            }else{
-                hashSet.add(nums[i]);
-            }
-        }
-        for(int i=0;i< nums.length;i++){
-            Integer count=hashMap.get(nums[i]);
-            hashMap.put(nums[i],count==null?1:count+1);
-        }
-        for(Map.Entry<Integer,Integer> entry:hashMap.entrySet()){
-            System.out.println(entry.getKey()+":"+entry.getValue());
-        }
-    }
-    public static void main8(String[] args) {
+    public static void main7(String[] args) {
         MyCircularQueue myCircularQueue=new MyCircularQueue(10);
         System.out.println(myCircularQueue.isEmpty());
         myCircularQueue.enQueue(1);
@@ -44,7 +20,7 @@ public class TestDemo {
         myCircularQueue.enQueue(11);
         System.out.println(myCircularQueue.Rear());
     }
-    public static void main7(String[] args) {
+    public static void main6(String[] args) {
         OperationTree operationTree=new OperationTree();
         BinarySearchTree binarySearchTree=new BinarySearchTree();
         binarySearchTree.insert(5);
@@ -71,7 +47,7 @@ public class TestDemo {
         operationTree.prevOrder(root);
         System.out.println();
     }
-    public static void main6(String[] args) {
+    public static void main5(String[] args) {
         OperationTree operationTree=new OperationTree();
         TreeNode root=operationTree.creatTree();
         System.out.print("先序遍历1：");
@@ -118,7 +94,7 @@ public class TestDemo {
         System.out.println("完全二叉树判断：");
         System.out.println(operationTree.isCompleteTree(root));
     }
-    public static void main5(String[] args) {
+    public static void main4(String[] args) {
         MyArrayStack myArrayStack=new MyArrayStack();
         myArrayStack.push(1);
         myArrayStack.push(2);
@@ -126,7 +102,7 @@ public class TestDemo {
         System.out.println(myArrayStack.pop());
         System.out.println(myArrayStack.peek());
     }
-    public static void main4(String[] args) {
+    public static void main3(String[] args) {
         MyQueue myQueue=new MyQueue();
         myQueue.offer(1);
         myQueue.offer(2);
@@ -134,7 +110,7 @@ public class TestDemo {
         System.out.println(myQueue.poll());
 
     }
-    public static void main3(String[] args) {
+    public static void main2(String[] args) {
         MySort mySort=new MySort();
         Random random = new Random();
         int[] nums1=new int[10_0000];
@@ -203,19 +179,10 @@ public class TestDemo {
         System.out.println("归并排序2："+(end-start));
 
     }
-    public static void main2(String[] args) {
+    public static void main1(String[] args) {
         int[] arr={1,4,2,5,6,3,7,9,0};
         MyHeap myHeap=new MyHeap(20);
         myHeap.creatHeap(arr);
         System.out.println();
-    }
-    public static void main1(String[] args) {
-        Stack<Integer> stack1=new Stack<>();
-        Stack<Integer> stack2=new Stack<>();
-        stack1.push(1);
-        stack1.push(13);
-        stack2.push(1);
-        stack2.push(13);
-        System.out.println(stack1.peek()==stack2.peek());
     }
 }
