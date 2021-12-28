@@ -1,8 +1,7 @@
 package MyComparator;
 
 
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 
 class Stu{
     String name;
@@ -46,7 +45,6 @@ class NumberCompartor implements Comparator<Stu>{
         return o1.number.compareTo(o2.number);
     }
 }
-
 
 
 public class MyComparator {

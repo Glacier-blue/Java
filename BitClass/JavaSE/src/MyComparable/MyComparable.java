@@ -1,6 +1,7 @@
 package MyComparable;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 class Stu implements Comparable<Stu>{
     String name;
@@ -34,7 +35,7 @@ class Stu implements Comparable<Stu>{
 }
 
 public class MyComparable {
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         Stu[] students=new Stu[5];
         students[0]=new Stu("zhangsan","0002",98.76);
         students[1]=new Stu("lisi","0001",98.45);
