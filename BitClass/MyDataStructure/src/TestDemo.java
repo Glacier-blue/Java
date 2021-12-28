@@ -1,8 +1,30 @@
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Stack;
+import java.util.*;
 
 public class TestDemo {
+    public static void main(String[] args) {
+        HashMap<Integer,Integer> hashMap=new HashMap<>();
+        Set<Integer> hashSet=new HashSet<>();
+        Random random=new Random();
+        int[] nums=new int[10_0000];
+        for(int i=0;i< nums.length;i++){
+            nums[i]= random.nextInt(10000);
+        }
+        for(int i=0;i< nums.length;i++){
+            if(hashSet.contains(nums[i])){
+                System.out.println(nums[i]);
+                break;
+            }else{
+                hashSet.add(nums[i]);
+            }
+        }
+        for(int i=0;i< nums.length;i++){
+            Integer count=hashMap.get(nums[i]);
+            hashMap.put(nums[i],count==null?1:count+1);
+        }
+        for(Map.Entry<Integer,Integer> entry:hashMap.entrySet()){
+            System.out.println(entry.getKey()+":"+entry.getValue());
+        }
+    }
     public static void main8(String[] args) {
         MyCircularQueue myCircularQueue=new MyCircularQueue(10);
         System.out.println(myCircularQueue.isEmpty());
