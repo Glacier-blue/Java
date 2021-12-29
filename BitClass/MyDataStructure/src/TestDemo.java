@@ -1,6 +1,36 @@
 import java.util.*;
 
 public class TestDemo {
+    public static void main(String[] args) {
+        HashBucket<Integer,Integer> hashBucket=new HashBucket<>();
+        hashBucket.put(1,1);
+        hashBucket.put(2,2);
+        hashBucket.put(3,3);
+        hashBucket.put(4,3);
+        hashBucket.put(5,5);
+        hashBucket.put(6,6);
+        hashBucket.put(7,7);
+        hashBucket.put(8,8);
+        hashBucket.put(9,9);
+        System.out.println(hashBucket.get(7));
+        hashBucket.put(10,10);
+        hashBucket.put(11,11);
+        hashBucket.put(12,12);
+        hashBucket.put(13,13);
+        hashBucket.put(14,14);
+        hashBucket.put(15,15);
+        hashBucket.put(16,16);
+        hashBucket.put(17,17);
+        hashBucket.put(17,24);
+        hashBucket.put(18,18);
+        hashBucket.put(19,19);
+        hashBucket.put(20,20);
+        System.out.println(hashBucket.get(7));
+        System.out.println(hashBucket.get(11));
+        System.out.println(hashBucket.get(17));
+        System.out.println(hashBucket.get(23));
+
+    }
     public static void main7(String[] args) {
         MyCircularQueue myCircularQueue=new MyCircularQueue(10);
         System.out.println(myCircularQueue.isEmpty());
