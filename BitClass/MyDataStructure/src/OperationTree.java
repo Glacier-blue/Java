@@ -2,8 +2,10 @@ import java.util.*;
 
 
 public class OperationTree {
-    //通过先序遍历创建一颗树
-//    static int i=0;
+    /**
+     * 通过先序遍历创建一颗树(字符树，给出‘#’等效于null
+     */
+//    private int i=0;
 //    public TreeNode creatTreeByPrevOrder(String str){
 //        if(str==null) return null;
 //        TreeNode root=null;
@@ -47,14 +49,14 @@ public class OperationTree {
         return A;
     }
     //递归先序遍历
-    public void prevOrder(TreeNode root){
+    public void preorder(TreeNode root){
         if(root==null) return;
         System.out.print(root.val+" ");
-        prevOrder(root.left);
-        prevOrder(root.right);
+        preorder(root.left);
+        preorder(root.right);
     }
     //非递归先序遍历
-    public void prevOrderNor(TreeNode root){
+    public void preorderNor(TreeNode root){
         if(root==null) return;
         Stack<TreeNode> stack=new Stack<>();
         TreeNode p=root;
@@ -71,15 +73,15 @@ public class OperationTree {
         System.out.println();
     }
     //递归中序遍历
-    public void inOrder(TreeNode root){
+    public void inorder(TreeNode root){
         if(root==null)
             return;
-        inOrder(root.left);
+        inorder(root.left);
         System.out.print(root.val+" ");
-        inOrder(root.right);
+        inorder(root.right);
     }
     //非递归中序遍历
-    public void inOrderNor(TreeNode root){
+    public void inorderNor(TreeNode root){
         if(root==null) return;
         TreeNode p=root;
         Stack<TreeNode> stack=new Stack<>();
@@ -96,14 +98,14 @@ public class OperationTree {
         System.out.println();
     }
     //递归后序遍历
-    public void postOrder(TreeNode root){
+    public void postorder(TreeNode root){
         if (root==null) return;
-        postOrder(root.left);
-        postOrder(root.right);
+        postorder(root.left);
+        postorder(root.right);
         System.out.print(root.val+" ");
     }
     //非递归后续遍历
-    public void postOrderNor(TreeNode root){
+    public void postorderNor(TreeNode root){
         if(root==null) return;
         Stack<TreeNode> stack=new Stack<>();
         TreeNode p=root;
@@ -127,7 +129,7 @@ public class OperationTree {
         System.out.println();
     }
     //层序遍历
-    public void leverOrder(TreeNode root){
+    public void leverorder(TreeNode root){
         if(root==null) return;
         Queue<TreeNode> queue=new LinkedList<>();
         TreeNode p=root;
@@ -182,10 +184,14 @@ public class OperationTree {
 //        }
         return getKLevelSize(root.left,k-1)+getKLevelSize(root.right,k-1);
     }
-    public TreeNode find(TreeNode root,int find){
+
+    /**
+     * 找到某个节点，通过递归方式，没有就返回null
+     */
+    public TreeNode find(TreeNode root,int key){
         if(root==null) return null;
-        if(root.val==find) return root;
-        return find(root.left,find)==null?find(root.right,find):find(root.left,find);
+        if(root.val==key) return root;
+        return find(root.left,key)==null?find(root.right,key):find(root.left,key);
     }
     //得到树的长度
     public int getHeight(TreeNode root){
@@ -235,5 +241,42 @@ public class OperationTree {
         }
         return true;
     }
-
+    //通过先序和中序遍历来建一颗树
+    private int previndex=0;
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        previndex=0;
+        return buildTreeChild(preorder,inorder,0,inorder.length-1);
+    }
+    private TreeNode buildTreeChild(int[] preorder,int[] inorder,int start,int end){
+        if(start>end) return null;
+        TreeNode root=new TreeNode(preorder[previndex]);
+        int index=findIndex(inorder,start,end,preorder[previndex]);
+        previndex++;
+        root.left=buildTreeChild(preorder,inorder,start,index-1);
+        root.right=buildTreeChild(preorder,inorder,index+1,end);
+        return root;
+    }
+    private int findIndex(int[] inorder,int start,int end,int key){
+        for(int i=start;i<=end;i++){
+            if(inorder[i]==key){
+                return i;
+            }
+        }
+        return -1;
+    }
+    //通过中序和后序遍历建立一颗树
+//    private int postIndex=0;
+//    public TreeNode buildTree(int[] inorder, int[] postorder) {
+//        return buildTreeChild(inorder,postorder,0,inorder.length-1);
+//    }
+//    public TreeNode buildTreeChild(int[] inorder,int[] postorder,int start,int end){
+//        if(start>end) return null;
+//        int postIndexX=postorder.length-1-postIndex;
+//        TreeNode root=new TreeNode(postorder[postIndexX]);
+//        int index=findIndex(inorder,start,end,postorder[postIndexX]);
+//        postIndex++;
+//        root.right=buildTreeChild(inorder,postorder,index+1,end);
+//        root.left=buildTreeChild(inorder,postorder,start,index-1);
+//        return root;
+//    }
 }
