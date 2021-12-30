@@ -8,7 +8,7 @@ public class TestString {
         s=str1+str2;
     }
     static String s;
-    public static void main3(String[] args) {
+    public static void main4(String[] args) {
         System.out.println(s=="123456");
         {
             String s=str1+"456";
@@ -20,7 +20,18 @@ public class TestString {
         }
     }
 
-    public static void main(String[] args) {
+    /**
+     * 测试hashCode和equals和===
+     */
+    public static void main3(String[] args) {
+        String s1=new String("123456");
+        String s2=new String("123456");
+        System.out.println(s1==s2);
+        System.out.println(s1.equals(s2));
+        System.out.println(s1.hashCode());
+        System.out.println(s2.hashCode());
+    }
+    public static void main2(String[] args) {
         char[] chars={'a','b','c','d'};
         String str=new String(chars);
         System.out.println(str);
