@@ -1,6 +1,15 @@
 import java.util.Arrays;
 
 public class TestString {
+    /**
+     * 字符串查找
+     */
+    public static void main(String[] args) {
+        String str="abcdefghj";
+        System.out.println(str.contains("def"));
+        System.out.println(str.indexOf("abcd"));
+        System.out.println(str.indexOf("abcd", 1));
+    }
     static final String str1="123";
     static final String str2;
     static {
@@ -19,7 +28,6 @@ public class TestString {
             System.out.println(s=="123456");
         }
     }
-
     /**
      * 测试hashCode和equals和===
      */
@@ -31,11 +39,16 @@ public class TestString {
         System.out.println(s1.hashCode());
         System.out.println(s2.hashCode());
     }
+    /**
+     * 字符串和字符数组转换问题
+     */
     public static void main2(String[] args) {
         char[] chars={'a','b','c','d'};
-        String str=new String(chars);
-        System.out.println(str);
-        char[] chars1=str.toCharArray();
+        String str1=new String(chars);
+        System.out.println(str1);
+        char[] chars1=str1.toCharArray();
+        String str2=new String(chars,0,3);
+        System.out.println(str2);
         System.out.println(Arrays.toString(chars1));
     }
     /**
