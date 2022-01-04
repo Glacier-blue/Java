@@ -17,7 +17,7 @@ create table book(
     );
 create table borrow(
     student_id varchar(20),
-    book_id int unique
+    book_id int
     );
 ```
 
