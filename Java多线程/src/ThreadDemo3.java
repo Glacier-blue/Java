@@ -6,9 +6,8 @@ public class ThreadDemo3 {
             public void run() {
                 for (int i = 0; i < 10; i++) {
                     System.out.println(Thread.currentThread().getName());
-                    // System.out.println(this.getName());
                     try {
-                        Thread.sleep(1);
+                        Thread.sleep(100);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -31,7 +30,6 @@ public class ThreadDemo3 {
         System.out.println(t.getState());
 
         t.start();
-
         while (t.isAlive()) {
             System.out.println("线程1 线程正在运行!");
             System.out.println(t.getState());
