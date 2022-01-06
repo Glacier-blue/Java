@@ -11,11 +11,16 @@ public class ThreadDemo2 {
     }
 
     public void serival(){
+        int temp=0;
         for(long i=0;i<count;i++){
-            i=i+1-1;
+            if((i&1)==1){
+                temp++;
+            }
         }
         for(long i=0;i<count;i++){
-            i=i+1-1;
+            if((i&1)==1){
+                temp--;
+            }
         }
     }
     /**
@@ -27,8 +32,11 @@ public class ThreadDemo2 {
         Thread thread1=new ThreadDemo1.MyThread(){
             @Override
             public void run() {
+                int tmp=0;
                 for(long i=0;i<count;i++){
-                    i=i+1-1;
+                    if((i&1)==1){
+                        tmp--;
+                    }
                 }
             }
         };
@@ -36,7 +44,10 @@ public class ThreadDemo2 {
             @Override
             public void run() {
                 for(long i=0;i<count;i++){
-                    i=i+1-1;
+                    int tmp=0;
+                    if((i&1)==1){
+                        tmp++;
+                    }
                 }
             }
         };
