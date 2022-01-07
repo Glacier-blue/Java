@@ -72,6 +72,29 @@ public class OperationTree {
         }
         System.out.println();
     }
+    public void preorderMorris(TreeNode root){
+        TreeNode cur=root;
+        TreeNode pre=null;
+        while (cur != null) {
+            pre = cur.left;
+            if (pre != null) {
+                while (pre.right != null && pre.right != cur) {
+                    pre = pre.right;
+                }
+                if (pre.right == null) {
+                    System.out.print(cur.val+" ");
+                    pre.right = cur;
+                    cur = cur.left;
+                    continue;
+                } else {
+                    pre.right = null;
+                }
+            } else {
+                System.out.print(cur.val+" ");
+            }
+            cur = cur.right;
+        }
+    }
     //递归中序遍历
     public void inorder(TreeNode root){
         if(root==null)
@@ -96,6 +119,29 @@ public class OperationTree {
             }
         }
         System.out.println();
+    }
+    public void inorderMorris(TreeNode root){
+        TreeNode cur=root;
+        TreeNode pre=null;
+        while(cur!=null) {
+            if (cur.left != null) {
+                pre = cur.left;
+                while (pre.right != null && pre.right != cur) {
+                    pre = pre.right;
+                }
+                if (pre.right == null) {
+                    pre.right = cur;
+                    cur = cur.left;
+                } else {
+                    System.out.print(cur.val + " ");
+                    pre.right = null;
+                    cur = cur.right;
+                }
+            } else {
+                System.out.print(cur.val + " ");
+                cur = cur.right;
+            }
+        }
     }
     //递归后序遍历
     public void postorder(TreeNode root){
@@ -127,6 +173,27 @@ public class OperationTree {
             }
         }
         System.out.println();
+    }
+    public void postorderMorris(TreeNode root){
+        TreeNode cur=root;
+        TreeNode pre=null;
+        while(cur!=null){
+            if(cur.left!=null){
+                pre=cur.left;
+                while(pre.right!=null&&pre.right!=cur){
+                    pre=pre.right;
+                }
+                if(pre.right==null){
+                    pre.right=cur;
+                    cur=cur.left;
+                    continue;
+                }else{
+                    pre.right=null;
+                    System.out.print(cur.left.val+" ");
+                }
+            }
+            cur=cur.right;
+        }
     }
     //层序遍历
     public void leverorder(TreeNode root){

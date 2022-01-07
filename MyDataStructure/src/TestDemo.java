@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class TestDemo {
-    public static void main(String[] args) {
+    public static void main8(String[] args) {
         HashBucket<Integer,Integer> hashBucket=new HashBucket<>();
         hashBucket.put(1,1);
         hashBucket.put(2,2);
@@ -77,7 +77,7 @@ public class TestDemo {
         operationTree.preorder(root);
         System.out.println();
     }
-    public static void main5(String[] args) {
+    public static void main(String[] args) {
         OperationTree operationTree=new OperationTree();
         TreeNode root=operationTree.creatTree();
         System.out.print("先序遍历1：");
@@ -85,16 +85,23 @@ public class TestDemo {
         System.out.println();
         System.out.print("先序遍历2：");
         operationTree.preorderNor(root);
+        System.out.print("莫里斯先序遍历:");
+        operationTree.preorderMorris(root);
         System.out.print("中序遍历1：");
         operationTree.inorder(root);
         System.out.println();
         System.out.print("中序遍历2：");
         operationTree.inorderNor(root);
+        System.out.print("莫里斯中序遍历");
+        operationTree.inorderMorris(root);
         System.out.print("后序遍历1：");
         operationTree.postorder(root);
         System.out.println();
         System.out.print("后序遍历2：");
         operationTree.postorderNor(root);
+        System.out.print("莫里斯后序遍历：");
+        operationTree.postorderMorris(root);
+        System.exit(0);
         System.out.println("节点个数测试");
         int[] size=new int[1];
         operationTree.getSize1(root,size);
