@@ -1,12 +1,11 @@
 
-class MyRunnable implements Runnable {
-    @Override
-    public void run() {
-        System.out.println("我是一个新线程");
-    }
-}
 public class ThreadDemo1 {
-
+    static class MyRunnable implements Runnable {
+        @Override
+        public void run() {
+            System.out.println("我是一个新线程");
+        }
+    }
     public static void main(String[] args) {
         Thread t=new Thread(()-> System.out.println("这是一个新线程"));
         t.start();
