@@ -2,6 +2,11 @@ import java.util.Arrays;
 
 public class DataStudy {
     public static void main(String[] args) {
+        Integer a=10231;
+        Integer b=10231;
+        System.out.println(a.equals(b));
+    }
+    public static void main6(String[] args) {
         int[] arr1={1,2,3,4,5,6,7};
         int[] arr2=Arrays.copyOf(arr1,arr1.length);//拷贝所有
         int[] arr3=Arrays.copyOfRange(arr1,1,3);//拷贝下标[1,3)之间的元素
