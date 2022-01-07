@@ -1,0 +1,22 @@
+/**
+ * 线程状态以及状态转移的观察
+ */
+public class ThreadDemo5 {
+    public static void main(String[] args) {
+        Thread t=new Thread(){
+            @Override
+            public void run() {
+                for(int i=0;i<100;i++){
+                    i=i+1-1;
+                }
+            }
+        };
+        System.out.println("start前："+t.getState());
+        t.start();
+        while(t.isAlive()){
+            System.out.println("Alive:"+t.getState());
+        }
+        System.out.println("end:"+t.getState());
+    }
+
+}
