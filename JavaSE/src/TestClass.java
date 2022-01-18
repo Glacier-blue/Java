@@ -1,4 +1,5 @@
 
+
 class Animal {
     public String name;
     public Animal(String name) {
@@ -7,6 +8,10 @@ class Animal {
     public void eat(String food) {
         System.out.println(this.name + "正在吃" + food);
     }
+    public static void testfun(){
+        System.out.println("测试函数");
+    }
+    public static int a=10;
 }
 
 class Cat extends Animal {
@@ -35,6 +40,13 @@ class Person{
 
 public class TestClass {
     public static void main(String[] args) {
+        System.out.println(Animal.a);
+        Animal.a++;
+        System.out.println(Cat.a);
+        Cat.a++;
+        System.out.println(Bird.a);
+    }
+    public static void main4(String[] args) {
         Cat cat = new Cat("小黑");
         cat.eat("猫粮");
         Bird bird = new Bird("圆圆");
