@@ -3,36 +3,6 @@ package MyComparable;
 import java.util.Arrays;
 import java.util.Comparator;
 
-class Stu implements Comparable<Stu>{
-    String name;
-    String number;
-    double score;
-    public Stu(String name, String number, double score) {
-        this.name = name;
-        this.number = number;
-        this.score = score;
-    }
-
-    @Override
-    public String toString() {
-        return "TestStu{" +
-                "name='" + name + '\'' +
-                ", number='" + number + '\'' +
-                ", score=" + score +
-                '}';
-    }
-
-    @Override
-    public int compareTo(Stu o) {
-        if(this.score<o.score){
-            return 1;
-        }else if(this.score==o.score){
-            return 0;
-        }else{
-            return -1;
-        }
-    }
-}
 
 public class MyComparable {
     public static void main1(String[] args) {

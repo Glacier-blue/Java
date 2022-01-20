@@ -1,53 +1,69 @@
 
-
-class Animal {
-    public String name;
-    public Animal(String name) {
-        this.name = name;
-    }
-    public void eat(String food) {
-        System.out.println(this.name + "正在吃" + food);
-    }
-    public static void testfun(){
-        System.out.println("测试函数");
-    }
-    public static int a=10;
-}
-
-class Cat extends Animal {
-    public Cat(String name) {
-        // 使用 super 调用父类的构造方法.
-        super(name);
-    }
-}
-
-class Bird extends Animal {
-    public Bird(String name) {
-        super(name);
-    }
-    public void fly() {
-        System.out.println(this.name + "正在飞 ︿(￣︶￣)︿");
-    }
-}
-class Person{
-    public String name;
-    public int age;
-    public void eat(){
-        System.out.println(name+" is eat");
-    }//方法
-    public static int count;//静态变量--属于类
-}
-
 public class TestClass {
+    static class Person{
+        public String name;
+        public int age;
+        public void eat(){
+            System.out.println(name+" is eat");
+        }//方法
+        public static int count;//静态变量--属于类
+    }
+    static class Animal {
+        public String name;
+        public Animal(String name) {
+            this.name = name;
+        }
+        public void eat(String food) {
+            System.out.println(this.name + "正在吃" + food);
+        }
+        public static void testfun(){
+            System.out.println("测试函数");
+        }
+        public static int a=10;
+    }
+
+    static class Cat extends Animal {
+        public Cat(String name) {
+            // 使用 super 调用父类的构造方法.
+            super(name);
+        }
+
+        @Override
+        public void eat(String food) {
+            System.out.println("eat Mouse");
+        }
+
+        public void findMouse(){
+            System.out.println("FindMouse");
+        }
+    }
+    static class Bird extends Animal {
+        public Bird(String name) {
+            super(name);
+        }
+        public void fly() {
+            System.out.println(this.name + "正在飞 ︿(￣︶￣)︿");
+        }
+    }
+
     public static void main(String[] args) {
+        Animal cat=new Cat("小黑");
+        cat.eat("mouse");
+        Cat cat1=new Cat("圆圆");
+        cat1.eat("mouse1");
+        Animal cat2=new Cat("小辉");
+        cat2.testfun();
+    }
+    public static void main5(String[] args) {
         System.out.println(Animal.a);
         Animal.a++;
         System.out.println(Cat.a);
         Cat.a++;
         System.out.println(Bird.a);
     }
-    public static void main4(String[] args) {
+    public static void main6(String[] args) {
         Cat cat = new Cat("小黑");
+        System.out.println("name->"+cat.name);
         cat.eat("猫粮");
         Bird bird = new Bird("圆圆");
         bird.fly();
