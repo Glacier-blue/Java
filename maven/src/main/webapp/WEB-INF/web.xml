@@ -23,5 +23,13 @@
     <servlet-name>ClacServlet</servlet-name>
     <url-pattern>/ClacServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ServletDemo1</servlet-name>
+    <servlet-class>ServletDemo1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo1</servlet-name>
+    <url-pattern>/ServletDemo1</url-pattern>
+  </servlet-mapping>
 
 </web-app>
