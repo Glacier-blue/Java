@@ -1,4 +1,4 @@
-package MyComparable;
+package comparable;
 
 class Stu implements Comparable<Stu>{
     String name;

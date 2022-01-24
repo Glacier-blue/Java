@@ -1,4 +1,4 @@
-package MyCloneable;
+package cloneable;
 
 
 public class MyCloneable {

@@ -1,36 +1,17 @@
+package basedata;
+
 import java.util.Arrays;
 
 public class TestString {
-    /**
-     * 字符串查找
-     */
+    //字符串查找
     public static void main(String[] args) {
         String str="abcdefghj";
         System.out.println(str.contains("def"));
         System.out.println(str.indexOf("abcd"));
         System.out.println(str.indexOf("abcd", 1));
     }
-    static final String str1="123";
-    static final String str2;
-    static {
-        str2="456";
-        s=str1+str2;
-    }
-    static String s;
-    public static void main4(String[] args) {
-        System.out.println(s=="123456");
-        {
-            String s=str1+"456";
-            System.out.println(s=="123456");
-        }
-        {
-            String s="123"+str2;
-            System.out.println(s=="123456");
-        }
-    }
-    /**
-     * 测试hashCode和equals和===
-     */
+
+    //测试hashCode和equals和==
     public static void main3(String[] args) {
         String s1=new String("123456");
         String s2=new String("123456");
@@ -39,9 +20,7 @@ public class TestString {
         System.out.println(s1.hashCode());
         System.out.println(s2.hashCode());
     }
-    /**
-     * 字符串和字符数组转换问题
-     */
+    //字符串和字符数组转换问题
     public static void main2(String[] args) {
         char[] chars={'a','b','c','d'};
         String str1=new String(chars);

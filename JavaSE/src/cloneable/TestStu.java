@@ -1,4 +1,4 @@
-package MyCloneable;
+package cloneable;
 
 class TestStu implements Cloneable{
     String name;
