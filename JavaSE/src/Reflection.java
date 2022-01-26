@@ -72,6 +72,7 @@ public class Reflection {
         //1.通过getClass获取Class对象
         Student s1 = new Student();
         Class c1 = s1.getClass();
+
         /**
          * 2.直接通过 类名.class 的方式得到,该方法最为安全可靠，程序性能更高
          * 这说明任何一个类都有一个隐含的静态成员变量 class
