@@ -3,7 +3,21 @@ package array;
 import java.util.Arrays;
 
 public class ArrayTest {
+
+
+
+    //打印数组的方式
+    //toSting打印一维数组
+    //deepToString打印二维数组
     public static void main(String[] args) {
+        int[] array1={1,2,3,4,5,6};
+        int[][] array2={{1,2,3},{4,5,6}};
+        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.deepToString(array2));
+    }
+
+
+    public static void main2(String[] args) {
         int[] arr1={1,2,3,4,5,6,7};
         int[] arr2=Arrays.copyOf(arr1,arr1.length);//拷贝所有
         int[] arr3=Arrays.copyOfRange(arr1,1,3);//拷贝下标[1,3)之间的元素
@@ -14,6 +28,8 @@ public class ArrayTest {
         System.out.println(Arrays.toString(arr4));
         System.out.println(Arrays.toString(arr5));
     }
+
+
     public static void main1(String[] args) {
         int[] arr1=new int[10];
         int[] arr2=arr1.clone();
