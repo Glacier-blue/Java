@@ -5,11 +5,10 @@ import java.util.Arrays;
 public class ArrayTest {
 
 
-
     //打印数组的方式
     //toSting打印一维数组
     //deepToString打印二维数组
-    public static void main(String[] args) {
+    public static void main3(String[] args) {
         int[] array1={1,2,3,4,5,6};
         int[][] array2={{1,2,3},{4,5,6}};
         System.out.println(Arrays.toString(array1));
