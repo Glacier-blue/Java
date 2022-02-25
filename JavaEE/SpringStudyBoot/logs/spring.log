@@ -1,0 +1,60 @@
+2022-02-25 19:06:06.514  INFO 1580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-25 19:06:06.562 ERROR 1580 --- [http-nio-8080-exec-1] c.e.s.controller.MethodController        : 用户名：xxx，密码：lll
+2022-02-25 19:07:24.423  INFO 1580 --- [restartedMain] c.e.s.SpringStudyBootApplication         : Starting SpringStudyBootApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 1580 (D:\Github\Java\JavaEE\SpringStudyBoot\target\classes started by wangfuming in D:\Github\Java\JavaEE\SpringStudyBoot)
+2022-02-25 19:07:24.423  INFO 1580 --- [restartedMain] c.e.s.SpringStudyBootApplication         : No active profile set, falling back to default profiles: default
+2022-02-25 19:07:24.645  INFO 1580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-25 19:07:24.646  INFO 1580 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 19:07:24.646  INFO 1580 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 19:07:24.662  INFO 1580 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 19:07:24.663  INFO 1580 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 237 ms
+2022-02-25 19:07:24.717  INFO 1580 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-02-25 19:07:24.745  INFO 1580 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 19:07:24.754  INFO 1580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-25 19:07:24.761  INFO 1580 --- [restartedMain] c.e.s.SpringStudyBootApplication         : Started SpringStudyBootApplication in 0.364 seconds (JVM running for 208.474)
+2022-02-25 19:07:24.762  INFO 1580 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-25 19:07:26.388  INFO 1580 --- [restartedMain] c.e.s.SpringStudyBootApplication         : Starting SpringStudyBootApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 1580 (D:\Github\Java\JavaEE\SpringStudyBoot\target\classes started by wangfuming in D:\Github\Java\JavaEE\SpringStudyBoot)
+2022-02-25 19:07:26.389  INFO 1580 --- [restartedMain] c.e.s.SpringStudyBootApplication         : No active profile set, falling back to default profiles: default
+2022-02-25 19:07:26.525  INFO 1580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-25 19:07:26.526  INFO 1580 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 19:07:26.526  INFO 1580 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 19:07:26.540  INFO 1580 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 19:07:26.540  INFO 1580 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 149 ms
+2022-02-25 19:07:26.573  INFO 1580 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-02-25 19:07:26.589  INFO 1580 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 19:07:26.594  INFO 1580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-25 19:07:26.598  INFO 1580 --- [restartedMain] c.e.s.SpringStudyBootApplication         : Started SpringStudyBootApplication in 0.23 seconds (JVM running for 210.312)
+2022-02-25 19:07:26.600  INFO 1580 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-25 19:07:27.757  INFO 1580 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-25 19:07:27.758  INFO 1580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-25 19:07:27.759  INFO 1580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-02-25 19:07:27.765  WARN 1580 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'user' for method parameter type User is not present]
+2022-02-25 19:08:12.203  INFO 1580 --- [restartedMain] c.e.s.SpringStudyBootApplication         : Starting SpringStudyBootApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 1580 (D:\Github\Java\JavaEE\SpringStudyBoot\target\classes started by wangfuming in D:\Github\Java\JavaEE\SpringStudyBoot)
+2022-02-25 19:08:12.203  INFO 1580 --- [restartedMain] c.e.s.SpringStudyBootApplication         : No active profile set, falling back to default profiles: default
+2022-02-25 19:08:12.360  INFO 1580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-25 19:08:12.360  INFO 1580 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 19:08:12.360  INFO 1580 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 19:08:12.382  INFO 1580 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 19:08:12.382  INFO 1580 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 176 ms
+2022-02-25 19:08:12.425  INFO 1580 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-02-25 19:08:12.445  INFO 1580 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 19:08:12.455  INFO 1580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-25 19:08:12.459  INFO 1580 --- [restartedMain] c.e.s.SpringStudyBootApplication         : Started SpringStudyBootApplication in 0.286 seconds (JVM running for 256.172)
+2022-02-25 19:08:12.460  INFO 1580 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-25 19:08:13.814  INFO 1580 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-25 19:08:13.814  INFO 1580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-25 19:08:13.815  INFO 1580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-02-25 19:08:14.114  INFO 1580 --- [restartedMain] c.e.s.SpringStudyBootApplication         : Starting SpringStudyBootApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 1580 (D:\Github\Java\JavaEE\SpringStudyBoot\target\classes started by wangfuming in D:\Github\Java\JavaEE\SpringStudyBoot)
+2022-02-25 19:08:14.115  INFO 1580 --- [restartedMain] c.e.s.SpringStudyBootApplication         : No active profile set, falling back to default profiles: default
+2022-02-25 19:08:14.268  INFO 1580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-25 19:08:14.269  INFO 1580 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 19:08:14.269  INFO 1580 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 19:08:14.279  INFO 1580 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 19:08:14.280  INFO 1580 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 163 ms
+2022-02-25 19:08:14.318  INFO 1580 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-02-25 19:08:14.336  INFO 1580 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 19:08:14.341  INFO 1580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-25 19:08:14.344  INFO 1580 --- [restartedMain] c.e.s.SpringStudyBootApplication         : Started SpringStudyBootApplication in 0.248 seconds (JVM running for 258.058)
+2022-02-25 19:08:14.345  INFO 1580 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-25 19:08:16.165  INFO 1580 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-25 19:08:16.165  INFO 1580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-25 19:08:16.166  INFO 1580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
