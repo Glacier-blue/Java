@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.online_music.dao.CollectionMapper">
+    <insert id="addLoveMusic">
+        insert into collection(user_id,music_id) values (#{userId},#{musicId})
+    </insert>
+    <delete id="removeLoveMusic">
+        delete from collection where user_id =#{userId} and music_id = #{musicId}
+    </delete>
+
+    <select id="ifMusicLove" resultType="com.example.online_music.model.Music">
+        select m.id as id,title,singer,time,url,userid from collection c,music m
+        where c.music_id=m.id and user_id=#{userId} and title like concat('%',#{str},'%')
+    </select>
+    <select id="findLoveMusic" resultType="com.example.online_music.model.Music">
+        select m.id as id,title,singer,time,url,userid from collection c,music m
+        where c.music_id=m.id and user_id=#{userId}
+    </select>
+    <select id="findLoveMusicById" resultType="com.example.online_music.model.Music">
+        select * from collection where user_id = #{userId} and music_id = #{musicId}
+    </select>
+</mapper>

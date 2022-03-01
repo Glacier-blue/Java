@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.eestudy.dao.ArticleMapper">
+    <resultMap id="BaseResultMap" type="com.example.eestudy.model.Article">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="createtime" column="createtime"/>
+        <result property="updatetime" column="updatetime"/>
+        <result property="uid" column="uid"/>
+        <result property="count" column="count"/>
+        <result property="state" column="state"/>
+        <association property="user"
+                     columnPrefix="u_"
+                     resultMap="com.example.eestudy.dao.UserMapper.BaseResultMap">
+        </association>
+    </resultMap>
+    <insert id="add" useGeneratedKeys="true" keyProperty="id" keyColumn="id"
+            parameterType="com.example.eestudy.model.Article">
+        insert into articleinfo(title,content,uid) values(#{title},#{content},#{uid})
+    </insert>
+    <insert id="addArticle">
+        insert into article(title,content,uid
+        <trim prefix="," prefixOverrides=",">
+            <if test="count!=0">count,</if>
+            <if test="state!=0">state,</if>
+        </trim>
+        )values(
+                #{title},#{content},#{uid}
+                <trim prefix="," prefixOverrides=",">
+                    <if test="count!=0">#{content}</if>
+                    <if test="state!=0">#{state}</if>
+                </trim>
+        )
+    </insert>
+    <update id="updateArticle">
+        update article
+            <set>
+                <if test="title!=null">title=#{title},</if>
+                <if test="content!=null">content=#{content},</if>
+            </set>
+        where id=#{id}
+    </update>
+    <delete id="deleteArticleByIds">
+        delete from article
+        where id in
+              <foreach collection="ids" item="item" separator="," open="(" close=")">#{item}</foreach>
+    </delete>
+    <delete id="delById">
+        delete from article where id=#{id}
+    </delete>
+    <select id="getAll" resultMap="BaseResultMap">
+        select a.*,u.id u_id,u.username u_username,u.password u_password
+        from article a left join user u
+        on u.id = a.uid
+    </select>
+    <select id="getArticle" resultType="com.example.eestudy.model.Article">
+        select * from article where 1=1
+        <if test="title!=null">
+            and title=#{title}
+        </if>
+        <if test="content!=null">
+            and content=#{content}
+        </if>
+        <if test="state!=0">
+            and state=#{state}
+        </if>
+    </select>
+    <select id="getArticle2" resultType="com.example.eestudy.model.Article">
+        select * from article
+        <trim prefix="where" prefixOverrides="and">
+            <if test="title!=null">
+                and title=#{title}
+            </if>
+            <if test="content!=null">
+                and content=#{content}
+            </if>
+            <if test="state!=0">
+                and state=#{state}
+            </if>
+        </trim>
+    </select>
+    <select id="getArticle3" resultType="com.example.eestudy.model.Article">
+        select * from article
+        <where>
+            <if test="title!=null">and title=#{title}</if>
+            <if test="content!=null">and content=#{content}</if>
+            <if test="state!=0">and state=#{state}</if>
+        </where>
+    </select>
+    <select id="detail" resultType="com.example.eestudy.model.Article">
+        select a.*,u.username u_username,u.photo u_photo from article a left join user u on a.uid=u.id where a.id=#{id}
+    </select>
+</mapper>
