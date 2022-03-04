@@ -10,18 +10,18 @@ public class ThreadDemo4 {
             } catch (InterruptedException e) {
                 System.out.println("通过异常收到了中断情况");
             }
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 5; i++) {
                 System.out.println(Thread.currentThread().isInterrupted());
             }
         }
     }
-    public static void main(String[] args) throws InterruptedException {
+    public static void main6(String[] args) throws InterruptedException {
         MyRunnable target = new MyRunnable();
         Thread thread = new Thread(target, "李四");
         thread.start();
         thread.interrupt();
     }
-    //清楚标志位
+    //清除标志位
     public static void main5(String[] args) {
         Thread t=new Thread(){
             @Override
@@ -34,8 +34,8 @@ public class ThreadDemo4 {
         t.start();
         t.interrupt();
     }
-    //不清楚标志位
-    public static void main4(String[] args) {
+    //不清除标志位
+    public static void main4(String[] args){
         Thread t=new Thread(){
             @Override
             public void run() {
@@ -45,6 +45,7 @@ public class ThreadDemo4 {
             }
         };
         t.start();
+        System.out.println("中断启动");
         t.interrupt();
     }
     //这个对捕捉的异常进行处理
@@ -101,6 +102,7 @@ public class ThreadDemo4 {
     private static boolean isQuit=false;
     public static void main1(String[] args) {
         Thread t=new Thread(){
+            @Override
             public void run(){
                while(!isQuit){
                    System.out.println("正在执行");
@@ -121,6 +123,5 @@ public class ThreadDemo4 {
         }
         System.out.println("请求终止执行");
         isQuit=true;
-
     }
 }

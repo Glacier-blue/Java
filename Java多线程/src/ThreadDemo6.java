@@ -26,7 +26,7 @@ public class ThreadDemo6 {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main3(String[] args) throws InterruptedException {
         MyThread mt = new MyThread() ;
         Thread t1 = new Thread(mt,"黄牛A");
         Thread t2 = new Thread(mt,"黄牛B");
@@ -38,7 +38,7 @@ public class ThreadDemo6 {
         t2.join();
         t3.join();
     }
-    public static void main2(String[] args) {
+    public static void main(String[] args) {
         Object locker1 = new Object();
         Object locker2 = new Object();
 
@@ -54,7 +54,6 @@ public class ThreadDemo6 {
             }
         };
         t1.start();
-
         Thread t2 = new Thread() {
             @Override
             public void run() {
@@ -78,6 +77,7 @@ public class ThreadDemo6 {
      */
     static class Counter{
         public int count=0;
+        //加锁
         synchronized public void increase(){
             count++;
         }

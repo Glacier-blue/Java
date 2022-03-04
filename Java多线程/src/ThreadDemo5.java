@@ -7,7 +7,19 @@ public class ThreadDemo5 {
             @Override
             public void run() {
                 for(int i=0;i<100;i++){
-                    i=i+1-1;
+                    if(i==10){
+                        try {
+                            Thread.sleep(1);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }else if(i==20){
+                        try {
+                            Thread.currentThread().wait(1);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
                 }
             }
         };

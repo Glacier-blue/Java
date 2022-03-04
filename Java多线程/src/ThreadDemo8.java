@@ -109,7 +109,7 @@ public class ThreadDemo8 {
          * 需要在锁内，加上sync锁
          */
         try {
-            object.wait();
+            object.wait(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

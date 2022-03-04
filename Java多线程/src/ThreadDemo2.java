@@ -1,16 +1,18 @@
 public class ThreadDemo2 {
     private final long count= 10000000000L;
+
+
     public static void main(String[] args) throws InterruptedException {
         ThreadDemo2 threadDemo2=new ThreadDemo2();
         long start=System.currentTimeMillis();
-        threadDemo2.serival();
+        threadDemo2.func1();
         long end=System.currentTimeMillis();
         System.out.println(end-start);
-        threadDemo2.concurrency();
+        threadDemo2.func2();
         // 执行时间由11s->3s
     }
 
-    public void serival(){
+    public void func1(){
         int temp=0;
         for(long i=0;i<count;i++){
             if((i&1)==1){
@@ -26,7 +28,7 @@ public class ThreadDemo2 {
     /**
      * t1，t2和main都是并发执行的
      */
-    public void concurrency() throws InterruptedException {
+    public void func2() throws InterruptedException {
         long start=System.currentTimeMillis();
         //匿名内部类
         Thread thread1=new ThreadDemo1.MyThread(){
