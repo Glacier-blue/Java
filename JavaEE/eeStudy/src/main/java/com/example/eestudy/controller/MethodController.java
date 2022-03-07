@@ -2,9 +2,11 @@ package com.example.eestudy.controller;
 
 
 import com.example.eestudy.model.User;
+import com.example.eestudy.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -45,5 +47,20 @@ public class MethodController {
     public User method5(@RequestBody User user){
         logger.error("用户名："+user.getUsername()+"，密码："+user.getPassword());
         return user;
+    }
+    @Autowired
+    private UserService userService;
+
+    @RequestMapping("addCache")
+    public User method6(int id){
+        return userService.getUserName(id);
+    }
+    @RequestMapping("updateCache")
+    public User method7(int id){
+        return userService.updateUserName(id);
+    }
+    @RequestMapping("deleteCache")
+    public User method8(int id){
+        return userService.deleteUserName(id);
     }
 }
