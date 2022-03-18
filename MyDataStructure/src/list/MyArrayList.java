@@ -28,7 +28,7 @@ public class MyArrayList {
             return;
         }
         if(isFull()){
-            this.elem= Arrays.copyOf(this.elem,this.elem.length+10);
+            this.elem= Arrays.copyOf(this.elem,(this.elem.length+this.elem.length<<1)>>1);
         }
         for(int i=this.usedSize-1;i>=pos;i--){
             elem[i+1]=elem[i];
@@ -48,14 +48,18 @@ public class MyArrayList {
     // 判定是否包含某个元素
     public boolean contains(int toFind) {
         for (int x: elem) {
-            if(x==toFind) return true;
+            if(x==toFind){
+                return true;
+            }
         }
         return false;
     }
     // 查找某个元素对应的位置
     public int search(int toFind) {
         for (int i = 0; i < elem.length; i++) {
-            if(elem[i]==toFind) return i;
+            if(elem[i]==toFind) {
+                return i;
+            }
         }
         return -1;
     }
