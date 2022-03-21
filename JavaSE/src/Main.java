@@ -2,6 +2,76 @@ import java.util.*;
 
 
 public class Main{
+
+
+    public static void main(String[] args) {
+        int[][] arr={{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+        List<Integer> ans=spiralOrder(arr);
+        for (Integer i:ans){
+            System.out.print(i+" ");
+        }
+    }
+
+    public static List<Integer> spiralOrder(int[][] matrix) {
+        List<Integer> ans=new ArrayList<>();
+        int m=matrix.length;
+        int n=matrix[0].length;
+        int row=0;
+        int col=0;
+        while(row<m&&col<n){
+            int i=row;
+            int j=col;
+            if(j<n){
+                while(j<n){
+                    ans.add(matrix[i][j]);
+                    j++;
+                }
+                j--;
+                i++;
+            }
+            row++;
+            if(i<m){
+                while(i<m){
+                    ans.add(matrix[i][j]);
+                    i++;
+                }
+                i--;
+                j--;
+            }
+            n--;
+            if(j>=col){
+
+            }
+            while(j>=col){
+                ans.add(matrix[i][j]);
+                j--;
+            }
+            j++;
+            m--;
+            i=m-1;
+            while(i>=row){
+                ans.add(matrix[i][j]);
+                i--;
+            }
+            col++;
+        }
+        return ans;
+    }
+
+
+//    public static void main(String[] args){
+//        Scanner sc=new Scanner(System.in);
+//        while(sc.hasNextLong()){
+//            long n=sc.nextLong();
+//            long r=sc.nextLong();
+//            boolean flag=(n/6.28)<=(r);
+//            System.out.println(n/6.28);
+//            System.out.println(r);
+//            String ans=flag?"Yes":"No";
+//            System.out.println(ans);
+//        }
+//    }
+
 //    public static void main(String[] args) {
 //        String s="leetcode";
 //        List<String> wordDict=new ArrayList<>();
@@ -31,48 +101,48 @@ public class Main{
 //        return dp[s.length()];
 //    }
 
-    private static List<int[]> ans=null;
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        int m=sc.nextInt();
-        int n=sc.nextInt();
-        int[][] board=new int[m][n];
-        for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
-                board[i][j]=sc.nextInt();
-            }
-        }
-        List<int[]> list=new ArrayList<>();
-        dfs(list,0,0,board);
-        for (int[] arr : ans) {
-            System.out.println("(" + arr[0] + "," + arr[1] + ")");
-        }
-    }
-    public static void dfs(List<int[]> list,int i,int j,int[][] board){
-        if(i<0 || i>=board.length || j<0 || j>=board[0].length){
-            if((i == board.length && j==board[0].length-1) || (j==board[0].length&&i== board.length-1)){
-                if(ans==null||ans.size()>list.size()){
-                    ans=new ArrayList<>(list);
-                }
-            }
-            return;
-        }
-        if(board[i][j]==1){
-            return;
-        }
-        int[] arr={i,j};
-        list.add(arr);
-        if(i+1<board.length){
-            dfs(list,i+1,j,board);
-        }
-        if(j+1< board[0].length){
-            dfs(list,i,j+1,board);
-        }
-        if(j-1>=0){
-            dfs(list,i,j-1,board);
-        }
-        list.remove(list.size()-1);
-    }
+//    private static List<int[]> ans=null;
+//    public static void main(String[] args){
+//        Scanner sc=new Scanner(System.in);
+//        int m=sc.nextInt();
+//        int n=sc.nextInt();
+//        int[][] board=new int[m][n];
+//        for(int i=0;i<m;i++){
+//            for(int j=0;j<n;j++){
+//                board[i][j]=sc.nextInt();
+//            }
+//        }
+//        List<int[]> list=new ArrayList<>();
+//        dfs(list,0,0,board);
+//        for (int[] arr : ans) {
+//            System.out.println("(" + arr[0] + "," + arr[1] + ")");
+//        }
+//    }
+//    public static void dfs(List<int[]> list,int i,int j,int[][] board){
+//        if(i<0 || i>=board.length || j<0 || j>=board[0].length){
+//            if((i == board.length && j==board[0].length-1) || (j==board[0].length&&i== board.length-1)){
+//                if(ans==null||ans.size()>list.size()){
+//                    ans=new ArrayList<>(list);
+//                }
+//            }
+//            return;
+//        }
+//        if(board[i][j]==1){
+//            return;
+//        }
+//        int[] arr={i,j};
+//        list.add(arr);
+//        if(i+1<board.length){
+//            dfs(list,i+1,j,board);
+//        }
+//        if(j+1< board[0].length){
+//            dfs(list,i,j+1,board);
+//        }
+//        if(j-1>=0){
+//            dfs(list,i,j-1,board);
+//        }
+//        list.remove(list.size()-1);
+//    }
 
 
 //    public static void main(String[] args) {
