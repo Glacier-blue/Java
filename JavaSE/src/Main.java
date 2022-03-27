@@ -3,60 +3,98 @@ import java.util.*;
 
 public class Main{
 
-
     public static void main(String[] args) {
-        int[][] arr={{1,2,3,4},{5,6,7,8},{9,10,11,12}};
-        List<Integer> ans=spiralOrder(arr);
-        for (Integer i:ans){
-            System.out.print(i+" ");
-        }
+        int nums1=123;
+        int nums2=234;
+        int ret=new Main().Add(nums1,nums2);
+        System.out.println(ret);
     }
-
-    public static List<Integer> spiralOrder(int[][] matrix) {
-        List<Integer> ans=new ArrayList<>();
-        int m=matrix.length;
-        int n=matrix[0].length;
-        int row=0;
-        int col=0;
-        while(row<m&&col<n){
-            int i=row;
-            int j=col;
-            if(j<n){
-                while(j<n){
-                    ans.add(matrix[i][j]);
-                    j++;
+    public int Add(int num1,int num2) {
+        int[] ans=new int[32];
+        boolean flag=false;
+        for(int i=0;i<32;i++){
+            int a=num1>>i;
+            int b=num2>>i;
+            if(a==1&&b==1){
+                if(flag){
+                    ans[i]=1;
+                }else{
+                    ans[i]=0;
+                    flag=true;
                 }
-                j--;
-                i++;
-            }
-            row++;
-            if(i<m){
-                while(i<m){
-                    ans.add(matrix[i][j]);
-                    i++;
+            }else if(a==1||b==1){
+                if(flag){
+                    ans[i]=0;
+                }else{
+                    ans[i]=1;
                 }
-                i--;
-                j--;
+            }else{
+                if(flag){
+                    ans[i]=1;
+                    flag=false;
+                }
             }
-            n--;
-            if(j>=col){
-
-            }
-            while(j>=col){
-                ans.add(matrix[i][j]);
-                j--;
-            }
-            j++;
-            m--;
-            i=m-1;
-            while(i>=row){
-                ans.add(matrix[i][j]);
-                i--;
-            }
-            col++;
         }
-        return ans;
+        int ret=0;
+        for(int i=31;i>=0;i--){
+            System.out.print(ans[i]);
+            ret=((ret<<1)|ans[i]);
+        }
+        return ret;
     }
+//    public static void main(String[] args) {
+//        int[][] arr={{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+//        List<Integer> ans=spiralOrder(arr);
+//        for (Integer i:ans){
+//            System.out.print(i+" ");
+//        }
+//    }
+//
+//    public static List<Integer> spiralOrder(int[][] matrix) {
+//        List<Integer> ans=new ArrayList<>();
+//        int m=matrix.length;
+//        int n=matrix[0].length;
+//        int row=0;
+//        int col=0;
+//        while(row<m&&col<n){
+//            int i=row;
+//            int j=col;
+//            if(j<n){
+//                while(j<n){
+//                    ans.add(matrix[i][j]);
+//                    j++;
+//                }
+//                j--;
+//                i++;
+//            }
+//            row++;
+//            if(i<m){
+//                while(i<m){
+//                    ans.add(matrix[i][j]);
+//                    i++;
+//                }
+//                i--;
+//                j--;
+//            }
+//            n--;
+//            if(j>=col){
+//
+//            }
+//            while(j>=col){
+//                ans.add(matrix[i][j]);
+//                j--;
+//            }
+//            j++;
+//            m--;
+//            i=m-1;
+//            while(i>=row){
+//                ans.add(matrix[i][j]);
+//                i--;
+//            }
+//            col++;
+//        }
+//        return ans;
+//    }
 
 
 //    public static void main(String[] args){
