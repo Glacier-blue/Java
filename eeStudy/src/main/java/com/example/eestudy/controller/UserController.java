@@ -3,8 +3,13 @@ package com.example.eestudy.controller;
 
 import com.example.eestudy.model.EEException;
 import com.example.eestudy.model.User;
+import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.ClassUtils;
 import org.springframework.web.bind.annotation.*;
@@ -12,8 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -88,14 +92,15 @@ public class UserController {
     @RequestMapping("/method")
     @ResponseBody
     public Object ret(){
-        Object o="abcdef";
+        Object o="abcdefg";
         return o;
     }
 
     @RequestMapping("/upload")
     @ResponseBody
     public Object upload(@RequestPart("file") MultipartFile file) throws IOException {
-        String path= Objects.requireNonNull(Objects.requireNonNull(ClassUtils.getDefaultClassLoader()).getResource("static")).getPath();
+//        String path= Objects.requireNonNull(Objects.requireNonNull(ClassUtils.getDefaultClassLoader()).getResource("static")).getPath();
+        String path=System.getProperty("user.dir");
         logger.error(path);
         path+="/upload/";
         String fileType= file.getOriginalFilename();
@@ -107,4 +112,18 @@ public class UserController {
         file.transferTo(new File(path+fileName));
         return "文件上传成功";
     }
+    @RequestMapping("/down")
+    public ResponseEntity<byte[]> down(HttpServletRequest req,String name) throws IOException {
+        String path=System.getProperty("user.dir")+"/upload/";
+
+        HttpHeaders headers = new HttpHeaders();
+        File file = new File(path+name);
+
+        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+        headers.setContentDispositionFormData("attachment", name);
+
+        return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(file),
+                headers, HttpStatus.CREATED);
+    }
+
 }

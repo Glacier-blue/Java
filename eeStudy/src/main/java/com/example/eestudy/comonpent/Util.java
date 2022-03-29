@@ -10,6 +10,7 @@ public class Util {
     @Scheduled(cron = "0/3 * * * * ?")
     public String doTask(){
         count++;
-        return "第"+count+"次执行任务";
+        String ret= "第"+count+"次执行任务";
+        return ret;
     }
 }

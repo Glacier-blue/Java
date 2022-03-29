@@ -15,6 +15,7 @@
             useGeneratedKeys="true" keyProperty="id" keyColumn="id">
         insert into user(username,password,photo) values (#{username},#{password},#{photo})
     </insert>
+
     <insert id="addArticle">
         insert into article(title,content,uid
         <trim prefix="," suffixOverrides=",">
