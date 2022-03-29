@@ -5,6 +5,10 @@ import java.util.*;
  * 这是对Java集合框架的联系以及测试
  */
 public class TestCollection {
+    public static void main(String[] args) {
+        LinkedHashMap<Integer,Integer> linkedHashMap=new LinkedHashMap<>();
+
+    }
     public static void main3(String[] args) {
         PriorityQueue<Integer> queue=new PriorityQueue<>((o1, o2) -> o2-o1);
         queue.offer(1);
@@ -42,7 +46,7 @@ public class TestCollection {
             System.out.println(entry.getKey()+":"+entry.getValue());
         }
     }
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         Stack<Integer> stack1=new Stack<>();
         Stack<Integer> stack2=new Stack<>();
         stack1.push(1);
