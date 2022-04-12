@@ -12,8 +12,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 import java.util.HashMap;
 
 public class MyResponseBody implements ResponseBodyAdvice {
-    @Autowired
-    private ObjectMapper objectMapper;
+
+    private objectMapper objectMapper;
 
     @Override
     public boolean supports(MethodParameter returnType, Class converterType) {
