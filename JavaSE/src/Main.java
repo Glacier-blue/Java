@@ -2,12 +2,58 @@ import java.util.*;
 
 
 public class Main{
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        Deque<Integer> stack=new LinkedList<>();
+        while(sc.hasNext()){
+            int n=sc.nextInt();
+            String s = sc.nextLine();
+            for(int i=0;i<s.length();i++){
+                char ch=s.charAt(i);
+                if(ch==' '){
+                    i++;
+                }
+                if(ch!='+'&&ch!='-'&&ch!='*'&&ch!='/'){
+                    Integer tmp=ch-48;
+                    stack.push(tmp);
+                }else{
+                    operation(stack,ch);
+                }
+            }
+            if(!stack.isEmpty()){
+                Integer ans=stack.pop();
+                System.out.println(ans);
+            }
+        }
+    }
+    public static void operation(Deque<Integer> stack,char c){
+        if(stack.isEmpty()){
+            return;
+        }
+        int a=stack.pop();
+        if(stack.isEmpty()){
+            return;
+        }
+        int b=stack.pop();
+        if(c=='='){
+            stack.push(a+b);
+        }else if(c=='-'){
+            stack.push(b-a);
+        }else if(c=='/'){
+            stack.push(b/a);
+        }else{
+            stack.push(a*b);
+        }
+    }
+    public static void main1(String[] args) {
         int nums1=123;
         int nums2=234;
         int ret=new Main().Add(nums1,nums2);
         System.out.println(ret);
+        for(int i=1,j=2;i<20&&j<20;i++,j++){
+            nums1++;
+        }
+        System.out.println(nums1);
     }
     public int Add(int num1,int num2) {
         int[] ans=new int[32];
