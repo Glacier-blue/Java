@@ -9,8 +9,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 
 @SpringBootApplication
-@EnableCaching //开启缓存
-@EnableScheduling //开启定时任务
+//@EnableCaching //开启缓存
+//@EnableScheduling //开启定时任务
 public class EeStudyApplication {
 
     public static void main(String[] args) {

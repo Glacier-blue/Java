@@ -20,6 +20,9 @@ public class AppConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/static/**")
                 .addResourceLocations("file:"+"D:\\wangfuming\\Desktop\\upload\\");
+        registry.addResourceHandler("/view/**")
+                .addResourceLocations("file:"+"D:\\Github\\View\\");
+        registry.addResourceHandler("/start/**").addResourceLocations("classpath:/start/");
     }
 
 
