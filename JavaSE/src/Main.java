@@ -2,92 +2,104 @@ import java.util.*;
 
 
 public class Main{
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        Deque<Integer> stack=new LinkedList<>();
-        while(sc.hasNext()){
-            int n=sc.nextInt();
-            String s = sc.nextLine();
-            for(int i=0;i<s.length();i++){
-                char ch=s.charAt(i);
-                if(ch==' '){
-                    i++;
-                }
-                if(ch!='+'&&ch!='-'&&ch!='*'&&ch!='/'){
-                    Integer tmp=ch-48;
-                    stack.push(tmp);
-                }else{
-                    operation(stack,ch);
-                }
-            }
-            if(!stack.isEmpty()){
-                Integer ans=stack.pop();
-                System.out.println(ans);
-            }
+        while(true){
+            double a = sc.nextDouble();
+            double b = a* 1.03;
+            double c = a / 12;
+            double d = c * 0.8;
+            double e = c * 0.2;
+            System.out.println("年薪:"+b+",基础月薪:"+d+",绩效:"+e);
+
         }
     }
-    public static void operation(Deque<Integer> stack,char c){
-        if(stack.isEmpty()){
-            return;
-        }
-        int a=stack.pop();
-        if(stack.isEmpty()){
-            return;
-        }
-        int b=stack.pop();
-        if(c=='='){
-            stack.push(a+b);
-        }else if(c=='-'){
-            stack.push(b-a);
-        }else if(c=='/'){
-            stack.push(b/a);
-        }else{
-            stack.push(a*b);
-        }
-    }
-    public static void main1(String[] args) {
-        int nums1=123;
-        int nums2=234;
-        int ret=new Main().Add(nums1,nums2);
-        System.out.println(ret);
-        for(int i=1,j=2;i<20&&j<20;i++,j++){
-            nums1++;
-        }
-        System.out.println(nums1);
-    }
-    public int Add(int num1,int num2) {
-        int[] ans=new int[32];
-        boolean flag=false;
-        for(int i=0;i<32;i++){
-            int a=num1>>i;
-            int b=num2>>i;
-            if(a==1&&b==1){
-                if(flag){
-                    ans[i]=1;
-                }else{
-                    ans[i]=0;
-                    flag=true;
-                }
-            }else if(a==1||b==1){
-                if(flag){
-                    ans[i]=0;
-                }else{
-                    ans[i]=1;
-                }
-            }else{
-                if(flag){
-                    ans[i]=1;
-                    flag=false;
-                }
-            }
-        }
-        int ret=0;
-        for(int i=31;i>=0;i--){
-            System.out.print(ans[i]);
-            ret=((ret<<1)|ans[i]);
-        }
-        return ret;
-    }
+//    public static void main1(String[] args){
+//        Scanner sc=new Scanner(System.in);
+//        Deque<Integer> stack=new LinkedList<>();
+//        while(sc.hasNext()){
+//            int n=sc.nextInt();
+//            String s = sc.nextLine();
+//            for(int i=0;i<s.length();i++){
+//                char ch=s.charAt(i);
+//                if(ch==' '){
+//                    i++;
+//                }
+//                if(ch!='+'&&ch!='-'&&ch!='*'&&ch!='/'){
+//                    Integer tmp=ch-48;
+//                    stack.push(tmp);
+//                }else{
+//                    operation(stack,ch);
+//                }
+//            }
+//            if(!stack.isEmpty()){
+//                Integer ans=stack.pop();
+//                System.out.println(ans);
+//            }
+//        }
+//    }
+//    public static void operation(Deque<Integer> stack,char c){
+//        if(stack.isEmpty()){
+//            return;
+//        }
+//        int a=stack.pop();
+//        if(stack.isEmpty()){
+//            return;
+//        }
+//        int b=stack.pop();
+//        if(c=='='){
+//            stack.push(a+b);
+//        }else if(c=='-'){
+//            stack.push(b-a);
+//        }else if(c=='/'){
+//            stack.push(b/a);
+//        }else{
+//            stack.push(a*b);
+//        }
+//    }
+//    public static void main1(String[] args) {
+//        int nums1=123;
+//        int nums2=234;
+//        int ret=new Main().Add(nums1,nums2);
+//        System.out.println(ret);
+//        for(int i=1,j=2;i<20&&j<20;i++,j++){
+//            nums1++;
+//        }
+//        System.out.println(nums1);
+//    }
+//    public int Add(int num1,int num2) {
+//        int[] ans=new int[32];
+//        boolean flag=false;
+//        for(int i=0;i<32;i++){
+//            int a=num1>>i;
+//            int b=num2>>i;
+//            if(a==1&&b==1){
+//                if(flag){
+//                    ans[i]=1;
+//                }else{
+//                    ans[i]=0;
+//                    flag=true;
+//                }
+//            }else if(a==1||b==1){
+//                if(flag){
+//                    ans[i]=0;
+//                }else{
+//                    ans[i]=1;
+//                }
+//            }else{
+//                if(flag){
+//                    ans[i]=1;
+//                    flag=false;
+//                }
+//            }
+//        }
+//        int ret=0;
+//        for(int i=31;i>=0;i--){
+//            System.out.print(ans[i]);
+//            ret=((ret<<1)|ans[i]);
+//        }
+//        return ret;
+//    }
 //    public static void main(String[] args) {
 //        int[][] arr={{1,2,3,4},{5,6,7,8},{9,10,11,12}};
 //        List<Integer> ans=spiralOrder(arr);
