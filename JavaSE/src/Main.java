@@ -6,12 +6,11 @@ public class Main{
         Scanner sc=new Scanner(System.in);
         while(true){
             double a = sc.nextDouble();
-            double b = a* 1.03;
+            double b = a* 1.02;
             double c = a / 12;
             double d = c * 0.8;
             double e = c * 0.2;
             System.out.println("年薪:"+b+",基础月薪:"+d+",绩效:"+e);
-
         }
     }
 //    public static void main1(String[] args){
