@@ -1,23 +1,52 @@
-2022-04-18 22:36:40.471  INFO 18400 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 18400 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:36:40.477  INFO 18400 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:36:40.540  INFO 18400 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-18 22:36:40.541  INFO 18400 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-18 22:36:41.707  INFO 18400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:36:41.714  INFO 18400 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:36:41.715  INFO 18400 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:36:41.799  INFO 18400 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:36:41.800  INFO 18400 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1258 ms
-2022-04-18 22:36:41.807 ERROR 18400 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.datatype.jsr310.JavaTimeModule]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-2022-04-18 22:36:41.823  INFO 18400 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-04-18 22:36:41.830  WARN 18400 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-2022-04-18 22:36:41.839  INFO 18400 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+2022-04-30 20:14:02.173  INFO 10292 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 10292 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
+2022-04-30 20:14:02.180  INFO 10292 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-04-30 20:14:02.271  INFO 10292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-30 20:14:02.272  INFO 10292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-30 20:14:03.211  INFO 10292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-30 20:14:03.214  INFO 10292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-30 20:14:03.240  INFO 10292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-04-30 20:14:03.906  INFO 10292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-04-30 20:14:03.914  INFO 10292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-30 20:14:03.916  INFO 10292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-30 20:14:04.044  INFO 10292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-30 20:14:04.045  INFO 10292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1772 ms
+2022-04-30 20:14:04.948  INFO 10292 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-04-30 20:14:05.126  INFO 10292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-30 20:14:05.160  INFO 10292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-04-30 20:14:05.172  INFO 10292 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 3.644 seconds (JVM running for 5.316)
+2022-04-30 20:14:11.460  INFO 10292 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 10292 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
+2022-04-30 20:14:11.460  INFO 10292 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-04-30 20:14:11.857  INFO 10292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-30 20:14:11.858  INFO 10292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-30 20:14:11.858  INFO 10292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2022-04-30 20:14:11.889  WARN 10292 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.eestudy]' package. Please check your configuration.
+2022-04-30 20:14:11.958  INFO 10292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-04-30 20:14:11.959  INFO 10292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-30 20:14:11.959  INFO 10292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-30 20:14:12.001  INFO 10292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-30 20:14:12.001  INFO 10292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 532 ms
+2022-04-30 20:14:12.136  INFO 10292 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-04-30 20:14:12.200  WARN 10292 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Github\Java\eeStudy\target\classes\mapper\ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Github\Java\eeStudy\target\classes\mapper\ArticleMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.eestudy.model.Article'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.eestudy.model.Article
+2022-04-30 20:14:12.202  INFO 10292 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-30 20:14:12.211  INFO 10292 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-04-18 22:36:41.865 ERROR 18400 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2022-04-30 20:14:12.240 ERROR 10292 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
-org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577) ~[spring-context-5.3.16.jar:5.3.16]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Github\Java\eeStudy\target\classes\mapper\ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Github\Java\eeStudy\target\classes\mapper\ArticleMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.eestudy.model.Article'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.eestudy.model.Article
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) [spring-boot-2.6.4.jar:2.6.4]
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) [spring-boot-2.6.4.jar:2.6.4]
@@ -30,524 +59,90 @@ org.springframework.context.ApplicationContextException: Unable to start web ser
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_192]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_192]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.6.4.jar:2.6.4]
-Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:478) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160) ~[spring-boot-2.6.4.jar:2.6.4]
-	... 13 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.datatype.jsr310.JavaTimeModule]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:175) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:170) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:155) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:260) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:234) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_192]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_192]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_192]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_192]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.6.4.jar:2.6.4]
-	... 18 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.datatype.jsr310.JavaTimeModule]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Github\Java\eeStudy\target\classes\mapper\ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Github\Java\eeStudy\target\classes\mapper\ArticleMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.eestudy.model.Article'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.eestudy.model.Article
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.16.jar:5.3.16]
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 59 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.datatype.jsr310.JavaTimeModule]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:146) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.registerWellKnownModulesIfAvailable(Jackson2ObjectMapperBuilder.java:832) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configure(Jackson2ObjectMapperBuilder.java:691) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.build(Jackson2ObjectMapperBuilder.java:674) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.json.MappingJackson2HttpMessageConverter.<init>(MappingJackson2HttpMessageConverter.java:59) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter.<init>(AllEncompassingFormHttpMessageConverter.java:91) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.web.filter.FormContentFilter.<init>(FormContentFilter.java:61) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.filter.OrderedFormContentFilter.<init>(OrderedFormContentFilter.java:29) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.formContentFilter(WebMvcAutoConfiguration.java:179) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	... 24 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Github\Java\eeStudy\target\classes\mapper\ArticleMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Github\Java\eeStudy\target\classes\mapper\ArticleMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.eestudy.model.Article'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.eestudy.model.Article
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1027ec2a.CGLIB$sqlSessionFactory$1(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1027ec2a$$FastClassBySpringCGLIB$$f4b8a85f.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1027ec2a.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.2.jar:2.2.2]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_192]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_192]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_192]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_192]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 60 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-	at com.fasterxml.jackson.datatype.jsr310.JavaTimeModule.<init>(JavaTimeModule.java:158) ~[jackson-datatype-jsr310-2.13.1.jar:2.13.1]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_192]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_192]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_192]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_192]
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 74 common frames omitted
+	... 25 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\Github\Java\eeStudy\target\classes\mapper\ArticleMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.eestudy.model.Article'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.eestudy.model.Article
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	... 38 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.eestudy.model.Article'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.eestudy.model.Article
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:263) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:254) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:246) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:119) ~[mybatis-3.5.9.jar:3.5.9]
+	... 40 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.eestudy.model.Article'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.eestudy.model.Article
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116) ~[mybatis-3.5.9.jar:3.5.9]
+	... 44 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.example.eestudy.model.Article
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:196) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116) ~[mybatis-3.5.9.jar:3.5.9]
+	... 46 common frames omitted
 
-2022-04-18 22:39:35.234  INFO 19936 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 19936 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:39:35.235  INFO 19936 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:39:35.279  INFO 19936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-18 22:39:35.279  INFO 19936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-18 22:39:36.195  INFO 19936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:39:36.201  INFO 19936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:39:36.202  INFO 19936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:39:36.312  INFO 19936 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:39:36.312  INFO 19936 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1033 ms
-2022-04-18 22:39:36.321 ERROR 19936 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.datatype.jsr310.JavaTimeModule]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-2022-04-18 22:39:36.336  INFO 19936 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-04-18 22:39:36.344  WARN 19936 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-2022-04-18 22:39:36.353  INFO 19936 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+2022-04-30 20:14:16.785  INFO 10292 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 10292 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
+2022-04-30 20:14:16.785  INFO 10292 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-04-30 20:14:17.107  INFO 10292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-30 20:14:17.107  INFO 10292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-30 20:14:17.115  INFO 10292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2022-04-30 20:14:17.293  INFO 10292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-04-30 20:14:17.294  INFO 10292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-30 20:14:17.294  INFO 10292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-30 20:14:17.344  INFO 10292 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-04-30 20:14:17.345  INFO 10292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 558 ms
+2022-04-30 20:14:17.554  INFO 10292 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-04-30 20:14:17.667  INFO 10292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-30 20:14:17.705  INFO 10292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-04-30 20:14:17.710  INFO 10292 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.953 seconds (JVM running for 17.854)
+2022-04-30 20:14:17.713  INFO 10292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-30 20:14:33.049  INFO 10292 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-30 20:14:33.050  INFO 10292 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-30 20:14:33.051  INFO 10292 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-30 20:15:15.511  INFO 10292 --- [lettuce-nioEventLoop-6-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-04-18 22:39:36.375 ERROR 19936 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_192]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258) ~[netty-buffer-4.1.74.Final.jar:4.1.74.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.74.Final.jar:4.1.74.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.74.Final.jar:4.1.74.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.74.Final.jar:4.1.74.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722) [netty-transport-4.1.74.Final.jar:4.1.74.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) [netty-transport-4.1.74.Final.jar:4.1.74.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) [netty-transport-4.1.74.Final.jar:4.1.74.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) [netty-transport-4.1.74.Final.jar:4.1.74.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) [netty-common-4.1.74.Final.jar:4.1.74.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.74.Final.jar:4.1.74.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.74.Final.jar:4.1.74.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_192]
 
-org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) [spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) [spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) [spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) [spring-boot-2.6.4.jar:2.6.4]
-	at com.example.eestudy.EeStudyApplication.main(EeStudyApplication.java:17) [classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_192]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_192]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_192]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_192]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.6.4.jar:2.6.4]
-Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:478) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160) ~[spring-boot-2.6.4.jar:2.6.4]
-	... 13 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.datatype.jsr310.JavaTimeModule]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:175) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:170) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:155) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:260) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:234) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_192]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_192]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_192]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_192]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.6.4.jar:2.6.4]
-	... 18 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.datatype.jsr310.JavaTimeModule]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 59 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.datatype.jsr310.JavaTimeModule]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:146) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.registerWellKnownModulesIfAvailable(Jackson2ObjectMapperBuilder.java:832) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configure(Jackson2ObjectMapperBuilder.java:691) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.build(Jackson2ObjectMapperBuilder.java:674) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.json.MappingJackson2HttpMessageConverter.<init>(MappingJackson2HttpMessageConverter.java:59) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter.<init>(AllEncompassingFormHttpMessageConverter.java:91) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.web.filter.FormContentFilter.<init>(FormContentFilter.java:61) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.filter.OrderedFormContentFilter.<init>(OrderedFormContentFilter.java:29) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.formContentFilter(WebMvcAutoConfiguration.java:179) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_192]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_192]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_192]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_192]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 60 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-	at com.fasterxml.jackson.datatype.jsr310.JavaTimeModule.<init>(JavaTimeModule.java:158) ~[jackson-datatype-jsr310-2.13.1.jar:2.13.1]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_192]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_192]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_192]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_192]
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 74 common frames omitted
-
-2022-04-18 22:40:39.926  INFO 18124 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 18124 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:40:39.928  INFO 18124 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:40:39.981  INFO 18124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-18 22:40:39.982  INFO 18124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-18 22:40:40.955  INFO 18124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:40:40.961  INFO 18124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:40:40.962  INFO 18124 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:40:41.048  INFO 18124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:40:41.048  INFO 18124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1065 ms
-2022-04-18 22:40:41.056 ERROR 18124 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.datatype.jsr310.JavaTimeModule]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-2022-04-18 22:40:41.070  INFO 18124 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-04-18 22:40:41.076  WARN 18124 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-2022-04-18 22:40:41.085  INFO 18124 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-04-18 22:40:41.105 ERROR 18124 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577) ~[spring-context-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) [spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) [spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) [spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) [spring-boot-2.6.4.jar:2.6.4]
-	at com.example.eestudy.EeStudyApplication.main(EeStudyApplication.java:17) [classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_192]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_192]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_192]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_192]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.6.4.jar:2.6.4]
-Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:478) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160) ~[spring-boot-2.6.4.jar:2.6.4]
-	... 13 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.datatype.jsr310.JavaTimeModule]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:175) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:170) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:155) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:260) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:234) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_192]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_192]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_192]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_192]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.6.4.jar:2.6.4]
-	... 18 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.datatype.jsr310.JavaTimeModule]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 59 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.datatype.jsr310.JavaTimeModule]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:146) ~[spring-beans-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.registerWellKnownModulesIfAvailable(Jackson2ObjectMapperBuilder.java:832) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configure(Jackson2ObjectMapperBuilder.java:691) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.build(Jackson2ObjectMapperBuilder.java:674) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.json.MappingJackson2HttpMessageConverter.<init>(MappingJackson2HttpMessageConverter.java:59) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter.<init>(AllEncompassingFormHttpMessageConverter.java:91) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.web.filter.FormContentFilter.<init>(FormContentFilter.java:61) ~[spring-web-5.3.16.jar:5.3.16]
-	at org.springframework.boot.web.servlet.filter.OrderedFormContentFilter.<init>(OrderedFormContentFilter.java:29) ~[spring-boot-2.6.4.jar:2.6.4]
-	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.formContentFilter(WebMvcAutoConfiguration.java:179) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_192]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_192]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_192]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_192]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 60 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/datatype/jsr310/ser/ZoneIdSerializer
-	at com.fasterxml.jackson.datatype.jsr310.JavaTimeModule.<init>(JavaTimeModule.java:158) ~[jackson-datatype-jsr310-2.13.1.jar:2.13.1]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_192]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_192]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_192]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_192]
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.16.jar:5.3.16]
-	... 74 common frames omitted
-
-2022-04-18 22:41:38.316  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:41:38.317  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:41:38.362  INFO 23356 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-18 22:41:38.362  INFO 23356 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-18 22:41:39.322  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:41:39.330  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:41:39.330  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:41:39.407  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:41:39.408  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1045 ms
-2022-04-18 22:41:39.922  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:41:40.023  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:41:40.051  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:41:40.060  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 2.109 seconds (JVM running for 2.816)
-2022-04-18 22:41:45.798  INFO 23356 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-18 22:41:45.798  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-18 22:41:45.799  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-04-18 22:44:56.422  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:44:56.422  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:44:56.686  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:44:56.687  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:44:56.687  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:44:56.713  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:44:56.713  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 289 ms
-2022-04-18 22:44:56.819  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:44:56.868  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:44:56.882  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:44:56.887  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.487 seconds (JVM running for 199.644)
-2022-04-18 22:44:56.892  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:44:58.574  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:44:58.574  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:44:58.781  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:44:58.781  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:44:58.782  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:44:58.817  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:44:58.818  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 242 ms
-2022-04-18 22:44:58.908  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:44:58.942  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:44:58.950  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:44:58.955  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.406 seconds (JVM running for 201.711)
-2022-04-18 22:44:58.956  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:44:59.315  INFO 23356 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-18 22:44:59.317  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-18 22:44:59.318  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-04-18 22:46:56.919  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:46:56.920  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:46:57.123  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:46:57.123  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:46:57.123  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:46:57.149  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:46:57.149  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 227 ms
-2022-04-18 22:46:57.232  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:46:57.259  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:46:57.267  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:46:57.271  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.37 seconds (JVM running for 320.028)
-2022-04-18 22:46:57.273  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:46:58.681  INFO 23356 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-18 22:46:58.683  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-18 22:46:58.685  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-04-18 22:46:58.957  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:46:58.957  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:46:59.163  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:46:59.164  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:46:59.164  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:46:59.189  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:46:59.189  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 229 ms
-2022-04-18 22:46:59.269  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:46:59.298  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:46:59.307  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:46:59.311  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.376 seconds (JVM running for 322.067)
-2022-04-18 22:46:59.312  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:47:00.067  INFO 23356 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-18 22:47:00.068  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-18 22:47:00.069  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-04-18 22:47:25.630  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:47:25.630  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:47:25.807  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:47:25.808  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:47:25.808  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:47:25.841  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:47:25.842  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 209 ms
-2022-04-18 22:47:25.950  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:47:25.984  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:47:25.992  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:47:25.996  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.384 seconds (JVM running for 348.752)
-2022-04-18 22:47:25.997  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:47:27.658  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:47:27.658  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:47:27.888  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:47:27.889  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:47:27.889  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:47:27.913  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:47:27.914  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 254 ms
-2022-04-18 22:47:27.995  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:47:28.025  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:47:28.033  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:47:28.036  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.395 seconds (JVM running for 350.793)
-2022-04-18 22:47:28.037  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:47:31.098  INFO 23356 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-18 22:47:31.099  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-18 22:47:31.100  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-04-18 22:47:41.088  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:47:41.088  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:47:41.287  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:47:41.288  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:47:41.288  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:47:41.324  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:47:41.324  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 235 ms
-2022-04-18 22:47:41.402  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:47:41.429  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:47:41.441  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:47:41.447  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.375 seconds (JVM running for 364.202)
-2022-04-18 22:47:41.448  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:47:43.223  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:47:43.224  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:47:43.482  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:47:43.482  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:47:43.483  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:47:43.508  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:47:43.508  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 282 ms
-2022-04-18 22:47:43.605  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:47:43.644  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:47:43.654  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:47:43.658  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.467 seconds (JVM running for 366.414)
-2022-04-18 22:47:43.659  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:47:53.600  INFO 23356 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-18 22:47:53.601  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-18 22:47:53.604  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2022-04-18 22:48:43.039  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:48:43.039  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:48:43.271  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:48:43.272  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:48:43.272  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:48:43.295  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:48:43.295  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 254 ms
-2022-04-18 22:48:43.406  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:48:43.435  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:48:43.443  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:48:43.446  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.427 seconds (JVM running for 426.202)
-2022-04-18 22:48:43.447  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:48:45.071  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:48:45.072  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:48:45.247  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:48:45.247  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:48:45.247  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:48:45.269  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:48:45.269  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 196 ms
-2022-04-18 22:48:45.348  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:48:45.375  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:48:45.382  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:48:45.386  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.331 seconds (JVM running for 428.142)
-2022-04-18 22:48:45.387  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:48:48.446  INFO 23356 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-18 22:48:48.446  INFO 23356 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-18 22:48:48.447  INFO 23356 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-04-18 22:49:45.520  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:49:45.520  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:49:45.698  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:49:45.699  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:49:45.700  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:49:45.726  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:49:45.726  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 204 ms
-2022-04-18 22:49:45.815  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:49:45.847  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:49:45.855  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:49:45.859  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.353 seconds (JVM running for 488.614)
-2022-04-18 22:49:45.860  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:49:47.492  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:49:47.492  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:49:47.663  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:49:47.664  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:49:47.664  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:49:47.687  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:49:47.687  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 193 ms
-2022-04-18 22:49:47.763  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:49:47.790  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:49:47.801  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:49:47.805  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.331 seconds (JVM running for 490.561)
-2022-04-18 22:49:47.806  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:49:48.004  INFO 23356 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-18 22:49:48.005  INFO 23356 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-18 22:49:48.006  INFO 23356 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-04-18 22:51:29.968  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:51:29.968  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:51:30.159  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:51:30.160  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:51:30.160  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:51:30.181  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:51:30.182  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 213 ms
-2022-04-18 22:51:30.237  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:51:30.261  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:51:30.267  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:51:30.271  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.319 seconds (JVM running for 593.027)
-2022-04-18 22:51:30.272  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:51:30.767  INFO 23356 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-18 22:51:30.768  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-18 22:51:30.769  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-04-18 22:51:31.889  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 23356 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-04-18 22:51:31.889  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-04-18 22:51:32.069  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-04-18 22:51:32.069  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-18 22:51:32.069  INFO 23356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-04-18 22:51:32.091  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-18 22:51:32.091  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 200 ms
-2022-04-18 22:51:32.175  INFO 23356 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-04-18 22:51:32.206  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-18 22:51:32.214  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-04-18 22:51:32.218  INFO 23356 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.348 seconds (JVM running for 594.974)
-2022-04-18 22:51:32.219  INFO 23356 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-18 22:51:37.751  INFO 23356 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-18 22:51:37.752  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-04-18 22:51:37.753  INFO 23356 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-30 20:15:15.589  INFO 10292 --- [lettuce-eventExecutorLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/127.0.0.1:6379
+2022-04-30 20:15:17.638  WARN 10292 --- [lettuce-nioEventLoop-6-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost:6379]: Connection refused: no further information: localhost/127.0.0.1:6379
+2022-04-30 20:15:22.081  INFO 10292 --- [lettuce-eventExecutorLoop-4-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
+2022-04-30 20:15:24.114  WARN 10292 --- [lettuce-nioEventLoop-6-5] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost:6379]: Connection refused: no further information: localhost/127.0.0.1:6379

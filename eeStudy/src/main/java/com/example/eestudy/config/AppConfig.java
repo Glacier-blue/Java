@@ -15,11 +15,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class AppConfig implements WebMvcConfigurer {
     private final Logger logger= LoggerFactory.getLogger(AppConfig.class);
 
-    
-
-
-
-
     //静态资源放行
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
