@@ -1,6 +1,9 @@
 package basedata;
 
 public class DataTest {
+    public static void main(String[] args) {
+        System.out.println(Float.MAX_VALUE);
+    }
     //Integer的缓存区在[-128,127]
     public static void main3(String[] args) {
         Integer a = 127;
