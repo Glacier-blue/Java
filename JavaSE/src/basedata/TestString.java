@@ -6,7 +6,7 @@ public class TestString {
     //字符串查找
     public static void main(String[] args) {
         String str="abcdefghj";
-        System.out.println(str.contains("def"));
+        System.out.println(str.indexOf("abcdef"));
         System.out.println(str.indexOf("abcd"));
         System.out.println(str.indexOf("abcd", 1));
     }
