@@ -61,14 +61,14 @@ public class AnimalDao {
         Connection connection = DBUtils.getConnect();
         PreparedStatement statement = null;
         ResultSet resultSet = null;
-        String sql = "select * from animal where id = ? or type = ? or subspecies = ? or age = ? or name = ?";
+        String sql = "select * from animal where id = ? or type = ? or subspecies = ? or age = ? or name like ?";
         try {
             statement = connection.prepareStatement(sql);
             statement.setInt(1,animal.id);
             statement.setString(2,animal.type);
             statement.setString(3,animal.subspecies);
             statement.setInt(4,animal.age);
-            statement.setString(5, animal.name);
+            statement.setString(5, "%"+animal.name+"%");
             resultSet = statement.executeQuery();
             while(resultSet.next()){
                 Animal findAnimal = new Animal();
