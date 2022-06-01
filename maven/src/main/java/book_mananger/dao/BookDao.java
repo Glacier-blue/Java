@@ -43,7 +43,7 @@ public class BookDao {
                 book.number = resultSet.getString("number");
                 book.name = resultSet.getString("name");
                 book.status = resultSet.getInt("status");
-                return null;
+                return book;
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

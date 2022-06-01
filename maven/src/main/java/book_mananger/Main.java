@@ -64,6 +64,7 @@ public class Main {
             }
             if (book.status != 0) {
                 System.out.println("书籍不存在或者已被借走，借阅失败");
+                return;
             }
             BookDao.update(id,1);
             BorrowDao.borrow(user.id,id);
@@ -76,8 +77,17 @@ public class Main {
         }else if(n==5){
             System.out.print("归还图书id>>>>");
             int id = sc.nextInt();
-            BorrowDao.back(user.id,id);
-            BookDao.update(id,0);
+            Book book = BookDao.selectBookById(id);
+            if(book==null){
+                System.out.println("书籍不存在");
+                return;
+            }
+            if(BorrowDao.borrowing(id, user.id)){
+                BorrowDao.back(user.id,id);
+                BookDao.update(id,0);
+            }else{
+                System.out.println("还书失败！你可能没有借过这本书");
+            }
         }else{
             System.exit(0);
         }
@@ -107,7 +117,7 @@ public class Main {
             if(book==null||book.status!=0){
                 System.out.println("书籍不存在或者已被借走，删除失败");
             }
-            BookDao.update(id,3);
+            BookDao.update(id,2);
         }else{
             System.exit(0);
         }

@@ -11,12 +11,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BorrowDao {
+    public static boolean borrowing(int sid,int id){
+        Connection connection = DBUtils.getConnect();
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        String sql = "select * from borrow where status = 0 and sid = ? and bid = ?";
+        try {
+            statement = connection.prepareStatement(sql);
+            statement.setInt(1,sid);
+            statement.setInt(2,id);
+            resultSet = statement.executeQuery();
+            if(resultSet.next()){
+                return true;
+            }
+            return false;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            DBUtils.close(connection,statement,resultSet);
+        }
+    }
     public static List<Book> borrowBook(int sid,int status){
         List<Book> books = new ArrayList<>();
         Connection connection = DBUtils.getConnect();
         PreparedStatement statement = null;
         ResultSet resultSet = null;
-        String sql = "select b.id,b.number,b.name from book b,borrow p where p.sid = ? and p.status = ? and b.id = p.bid";
+        String sql = "select b.id,b.number,b.name,b.status from book b,borrow p where p.sid = ? and p.status = ? and b.id = p.bid";
         try {
             statement = connection.prepareStatement(sql);
             statement.setInt(1,sid);
@@ -27,6 +47,7 @@ public class BorrowDao {
                 book.id = resultSet.getInt("id");
                 book.number = resultSet.getString("number");
                 book.name = resultSet.getString("name");
+                book.status = resultSet.getInt("status");
                 books.add(book);
             }
             return books;

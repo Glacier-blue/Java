@@ -68,7 +68,7 @@ public class UserDao {
     }
     public static boolean add(User user)  {
         Connection connection = DBUtils.getConnect();
-        String sql = "insert into user value (null,?,?,0,0,?)";
+        String sql = "insert into user value (null,?,?,?,0,0)";
         PreparedStatement statement = null;
         try {
             statement = connection.prepareStatement(sql);
