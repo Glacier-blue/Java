@@ -58,7 +58,7 @@ public class PlantController {
             }else if(n==2){
                 String msg = plant.name;
                 System.out.print("植物名字>>>");
-                plant.type = scanner.nextLine();
+                plant.name = scanner.nextLine();
                 System.out.println("name:"+msg+"→"+ plant.name);
             }else if(n==3){
                 int msg = plant.status;
