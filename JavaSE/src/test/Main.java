@@ -1,20 +1,30 @@
 package test;
 
+import sun.security.provider.MD5;
+
+import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 
 public class Main{
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        while(true){
-            double a = sc.nextDouble();
-            double b = a* 1.02;
-            double c = a / 12;
-            double d = c * 0.8;
-            double e = c * 0.2;
-            System.out.println("年薪:"+b+",基础月薪:"+d+",绩效:"+e);
-        }
-    }
+
+
+
+
+//    public static void main(String[] args) 16
+//        Scanner sc=new Scanner(System.in);
+//        while(true){
+//            double a = sc.nextDouble();
+//            double b = a* 1.02;
+//            double c = a / 12;
+//            double d = c * 0.8;
+//            double e = c * 0.2;
+//            System.out.println("年薪:"+b+",基础月薪:"+d+",绩效:"+e);
+//        }
+//    }
 //    public static void main1(String[] args){
 //        Scanner sc=new Scanner(System.in);
 //        Deque<Integer> stack=new LinkedList<>();

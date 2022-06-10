@@ -16,7 +16,7 @@ public class Main{
         }
         while(sc.hasNext()){
             int n=sc.nextInt();
-            int ans=dp[i-1]%100;
+            int ans = n;
             System.out.println(ans);
         }
     }
