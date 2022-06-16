@@ -6,6 +6,16 @@ import java.util.*;
  */
 public class TestCollection {
     public static void main(String[] args) {
+        Map<Integer,Integer> map = new HashMap<>();
+        map.put(1,2);
+        map.put(2,3);
+        map.put(3,4);
+        Set<Map.Entry<Integer,Integer>> set = map.entrySet();
+        for(Map.Entry<Integer, Integer> e:set){
+            System.out.println(e.getValue());
+        }
+    }
+    public static void main4(String[] args) {
         LinkedHashMap<Integer,Integer> linkedHashMap=new LinkedHashMap<>();
 
     }
