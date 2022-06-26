@@ -11,5 +11,9 @@ public class AVLNode {
     public AVLNode(int val){
         this.val=val;
     }
+    public AVLNode(int val,int bf){
+        this(val);
+        this.bf = bf;
+    }
 
 }

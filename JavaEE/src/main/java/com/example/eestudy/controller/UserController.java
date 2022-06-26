@@ -54,6 +54,7 @@ public class UserController {
     /*-----------------------------------------------------------------------------------------------*/
     //文件上传
     @RequestMapping("/register")
+    @ResponseBody
     public Object register(String username, @RequestPart MultipartFile file) throws IOException {
         //动态获取路径
         String path= Objects.requireNonNull(Objects.requireNonNull(ClassUtils.getDefaultClassLoader()).getResource("static")).getPath();
@@ -66,7 +67,7 @@ public class UserController {
         fileType=fileType.substring(fileType.lastIndexOf("."));
         String fileName= UUID.randomUUID() +fileType;
         file.transferTo(new File(path+fileName));
-        return null;
+        return "success and name = "+fileName;
     }
 
     @RequestMapping("/set")

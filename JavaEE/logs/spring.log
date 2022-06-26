@@ -1,99 +1,122 @@
-2022-05-09 20:53:24.442  INFO 16068 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 16068 (D:\Github\Java\eeStudy\target\classes started by wangfuming in D:\Github\Java\eeStudy)
-2022-05-09 20:53:24.448  INFO 16068 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-05-09 20:53:24.491  INFO 16068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-05-09 20:53:24.491  INFO 16068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-05-09 20:53:25.215  INFO 16068 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-05-09 20:53:25.217  INFO 16068 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-05-09 20:53:25.245  INFO 16068 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
-2022-05-09 20:53:25.834  INFO 16068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-05-09 20:53:25.842  INFO 16068 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-09 20:53:25.843  INFO 16068 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-05-09 20:53:25.943  INFO 16068 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-09 20:53:25.943  INFO 16068 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1451 ms
-2022-05-09 20:53:26.838  INFO 16068 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-05-09 20:53:27.020  INFO 16068 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-09 20:53:27.051  INFO 16068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-05-09 20:53:27.061  INFO 16068 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 3.055 seconds (JVM running for 4.368)
-2022-05-09 20:53:48.842  INFO 16068 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-09 20:53:48.844  INFO 16068 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-09 20:53:48.845  INFO 16068 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-09 20:54:44.491  INFO 18200 --- [main] com.example.eestudy.dao.UserMapperTest   : Starting UserMapperTest using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 18200 (started by wangfuming in D:\Github\Java\eeStudy)
-2022-05-09 20:54:44.493  INFO 18200 --- [main] com.example.eestudy.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2022-05-09 20:54:45.261  INFO 18200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-05-09 20:54:45.265  INFO 18200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-05-09 20:54:45.308  INFO 18200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
-2022-05-09 20:54:47.444  INFO 18200 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-05-09 20:54:47.887  INFO 18200 --- [main] com.example.eestudy.dao.UserMapperTest   : Started UserMapperTest in 3.728 seconds (JVM running for 5.042)
-2022-05-09 20:54:48.221  INFO 18200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-09 20:54:48.228  WARN 18200 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-05-09 20:54:48.407  INFO 18200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-09 20:54:48.501  INFO 18200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-05-09 20:54:48.512  INFO 18200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-05-09 20:55:02.213  INFO 17508 --- [main] com.example.eestudy.dao.UserMapperTest   : Starting UserMapperTest using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 17508 (started by wangfuming in D:\Github\Java\eeStudy)
-2022-05-09 20:55:02.215  INFO 17508 --- [main] com.example.eestudy.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2022-05-09 20:55:03.008  INFO 17508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-05-09 20:55:03.015  INFO 17508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-05-09 20:55:03.054  INFO 17508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
-2022-05-09 20:55:04.905  INFO 17508 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-05-09 20:55:05.384  INFO 17508 --- [main] com.example.eestudy.dao.UserMapperTest   : Started UserMapperTest in 3.566 seconds (JVM running for 4.955)
-2022-05-09 20:55:05.689  INFO 17508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-09 20:55:05.695  WARN 17508 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-05-09 20:55:05.923  INFO 17508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-09 20:55:06.020  INFO 17508 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-05-09 20:55:06.029  INFO 17508 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-05-09 20:55:19.627  INFO 18028 --- [main] com.example.eestudy.dao.UserMapperTest   : Starting UserMapperTest using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 18028 (started by wangfuming in D:\Github\Java\eeStudy)
-2022-05-09 20:55:19.629  INFO 18028 --- [main] com.example.eestudy.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2022-05-09 20:55:20.448  INFO 18028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-05-09 20:55:20.455  INFO 18028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-05-09 20:55:20.505  INFO 18028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
-2022-05-09 20:55:22.735  INFO 18028 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-05-09 20:55:23.236  INFO 18028 --- [main] com.example.eestudy.dao.UserMapperTest   : Started UserMapperTest in 3.934 seconds (JVM running for 5.364)
-2022-05-09 20:55:23.548  INFO 18028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-09 20:55:23.554  WARN 18028 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-05-09 20:55:23.786  INFO 18028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-09 20:55:23.910  INFO 18028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-05-09 20:55:23.928  INFO 18028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-05-09 20:55:56.214  INFO 17868 --- [main] com.example.eestudy.dao.UserMapperTest   : Starting UserMapperTest using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 17868 (started by wangfuming in D:\Github\Java\eeStudy)
-2022-05-09 20:55:56.216  INFO 17868 --- [main] com.example.eestudy.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2022-05-09 20:55:56.930  INFO 17868 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-05-09 20:55:56.935  INFO 17868 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-05-09 20:55:56.968  INFO 17868 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-2022-05-09 20:55:58.894  INFO 17868 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-05-09 20:55:59.294  INFO 17868 --- [main] com.example.eestudy.dao.UserMapperTest   : Started UserMapperTest in 3.432 seconds (JVM running for 4.777)
-2022-05-09 20:55:59.588  INFO 17868 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-09 20:55:59.779  INFO 17868 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-09 20:55:59.874  INFO 17868 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-05-09 20:55:59.899  INFO 17868 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-05-09 20:56:09.779  INFO 10948 --- [main] com.example.eestudy.dao.UserMapperTest   : Starting UserMapperTest using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 10948 (started by wangfuming in D:\Github\Java\eeStudy)
-2022-05-09 20:56:09.781  INFO 10948 --- [main] com.example.eestudy.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2022-05-09 20:56:10.485  INFO 10948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-05-09 20:56:10.488  INFO 10948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-05-09 20:56:10.520  INFO 10948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-2022-05-09 20:56:12.638  INFO 10948 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-05-09 20:56:13.087  INFO 10948 --- [main] com.example.eestudy.dao.UserMapperTest   : Started UserMapperTest in 3.639 seconds (JVM running for 4.986)
-2022-05-09 20:56:13.377  INFO 10948 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-09 20:56:13.603  INFO 10948 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-09 20:56:13.689  INFO 10948 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-05-09 20:56:13.698  INFO 10948 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-05-09 20:56:20.654  INFO 7316 --- [main] com.example.eestudy.dao.UserMapperTest   : Starting UserMapperTest using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 7316 (started by wangfuming in D:\Github\Java\eeStudy)
-2022-05-09 20:56:20.655  INFO 7316 --- [main] com.example.eestudy.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2022-05-09 20:56:21.547  INFO 7316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-05-09 20:56:21.551  INFO 7316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-05-09 20:56:21.592  INFO 7316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
-2022-05-09 20:56:23.693  INFO 7316 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-05-09 20:56:24.194  INFO 7316 --- [main] com.example.eestudy.dao.UserMapperTest   : Started UserMapperTest in 3.867 seconds (JVM running for 5.259)
-2022-05-09 20:56:24.491  INFO 7316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-09 20:56:24.702  INFO 7316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-09 20:56:24.791  INFO 7316 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-05-09 20:56:24.799  INFO 7316 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-05-09 20:56:30.913  INFO 8272 --- [main] com.example.eestudy.dao.UserMapperTest   : Starting UserMapperTest using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 8272 (started by wangfuming in D:\Github\Java\eeStudy)
-2022-05-09 20:56:30.915  INFO 8272 --- [main] com.example.eestudy.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2022-05-09 20:56:31.729  INFO 8272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-05-09 20:56:31.733  INFO 8272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-05-09 20:56:31.766  INFO 8272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-2022-05-09 20:56:33.971  INFO 8272 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-05-09 20:56:34.626  INFO 8272 --- [main] com.example.eestudy.dao.UserMapperTest   : Started UserMapperTest in 4.273 seconds (JVM running for 5.629)
-2022-05-09 20:56:34.977  INFO 8272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-09 20:56:35.163  INFO 8272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-09 20:56:35.250  INFO 8272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-05-09 20:56:35.258  INFO 8272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-20 21:28:27.796  INFO 15424 --- [main] com.example.eestudy.dao.UserMapperTest   : Starting UserMapperTest using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 15424 (started by wangfuming in D:\Github\Java\JavaEE)
+2022-06-20 21:28:27.803  INFO 15424 --- [main] com.example.eestudy.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 21:28:28.812  INFO 15424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-20 21:28:28.817  INFO 15424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-20 21:28:28.857  INFO 15424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2022-06-20 21:28:31.230  INFO 15424 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-06-20 21:28:31.846  INFO 15424 --- [main] com.example.eestudy.dao.UserMapperTest   : Started UserMapperTest in 4.473 seconds (JVM running for 5.94)
+2022-06-20 21:28:32.254  INFO 15424 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-20 21:28:32.462  INFO 15424 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-20 21:28:32.580  INFO 15424 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-20 21:28:32.595  INFO 15424 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-20 21:28:39.949  INFO 16208 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 16208 (D:\Github\Java\JavaEE\target\classes started by wangfuming in D:\Github\Java\JavaEE)
+2022-06-20 21:28:39.950  INFO 16208 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 21:28:40.004  INFO 16208 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-20 21:28:40.005  INFO 16208 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-20 21:28:40.656  INFO 16208 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-20 21:28:40.658  INFO 16208 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-20 21:28:40.683  INFO 16208 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-06-20 21:28:41.265  INFO 16208 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-06-20 21:28:41.280  INFO 16208 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 21:28:41.281  INFO 16208 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 21:28:41.403  INFO 16208 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-20 21:28:41.403  INFO 16208 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1397 ms
+2022-06-20 21:28:42.147  INFO 16208 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-06-20 21:28:42.353  INFO 16208 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-20 21:28:42.390  INFO 16208 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-06-20 21:28:42.400  INFO 16208 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 2.842 seconds (JVM running for 3.784)
+2022-06-20 21:29:00.653  INFO 16208 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-20 21:29:00.654  INFO 16208 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-20 21:29:00.656  INFO 16208 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-06-20 21:29:00.685 ERROR 16208 --- [http-nio-8081-exec-1] c.e.eestudy.controller.MVCController     : 这是跳转链接
+2022-06-20 21:30:52.552 ERROR 16208 --- [http-nio-8081-exec-6] c.e.eestudy.controller.MVCController     : 我是 index4
+2022-06-20 21:30:55.621  WARN 16208 --- [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-06-20 21:31:28.507 ERROR 16208 --- [http-nio-8081-exec-2] c.e.eestudy.controller.MVCController     : index4函数
+2022-06-20 21:33:34.359 ERROR 16208 --- [http-nio-8081-exec-1] c.e.eestudy.controller.MethodController  : 用户名：{"name":"wfm"}，密码：null
+2022-06-20 21:33:42.149 ERROR 16208 --- [http-nio-8081-exec-2] c.e.eestudy.controller.MethodController  : 用户名：{"name":"wfm"}，密码：123
+2022-06-20 21:35:11.880  WARN 16208 --- [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
+2022-06-20 21:35:23.474 ERROR 16208 --- [http-nio-8081-exec-6] c.e.eestudy.controller.MethodController  : 用户名：wfm，密码：123
+2022-06-20 21:36:08.899 ERROR 16208 --- [http-nio-8081-exec-7] c.e.eestudy.controller.MethodController  : 用户名：wfm，密码：123
+2022-06-20 21:36:18.046 ERROR 16208 --- [http-nio-8081-exec-9] c.e.eestudy.controller.MethodController  : 用户名：wfm,wfm1，密码：123
+2022-06-20 21:48:20.139  INFO 10180 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 10180 (D:\Github\Java\JavaEE\target\classes started by wangfuming in D:\Github\Java\JavaEE)
+2022-06-20 21:48:20.139  INFO 10180 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 21:48:20.187  INFO 10180 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-20 21:48:20.187  INFO 10180 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-20 21:48:20.896  INFO 10180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-20 21:48:20.899  INFO 10180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-20 21:48:20.931  INFO 10180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2022-06-20 21:48:21.631  INFO 10180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-06-20 21:48:21.650  INFO 10180 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 21:48:21.650  INFO 10180 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 21:48:21.785  INFO 10180 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-20 21:48:21.785  INFO 10180 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1597 ms
+2022-06-20 21:48:22.700  INFO 10180 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-06-20 21:48:22.907  INFO 10180 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-20 21:48:22.941  INFO 10180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-06-20 21:48:22.953  INFO 10180 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 3.34 seconds (JVM running for 4.428)
+2022-06-20 21:50:42.538  INFO 10180 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-20 21:50:42.539  INFO 10180 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-20 21:50:42.541  INFO 10180 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-20 21:50:42.644  WARN 10180 --- [http-nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required request part 'file' is not present]
+2022-06-20 21:51:22.841  WARN 10180 --- [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required request part 'file' is not present]
+2022-06-20 21:51:33.838 ERROR 10180 --- [http-nio-8081-exec-3] c.e.eestudy.controller.UserController    : /D:/Github/Java/JavaEE/target/classes/static
+2022-06-20 21:51:33.843  WARN 10180 --- [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.io.IOException: java.io.FileNotFoundException: D:\Github\Java\JavaEE\target\classes\static\upload\53fe59b2-3c30-4212-9392-b42e7f055918.png (系统找不到指定的路径。)]
+2022-06-20 21:51:52.693 ERROR 10180 --- [http-nio-8081-exec-4] c.e.eestudy.controller.UserController    : /D:/Github/Java/JavaEE/target/classes/static
+2022-06-20 21:53:09.083 ERROR 10180 --- [http-nio-8081-exec-6] c.e.eestudy.controller.UserController    : /D:/Github/Java/JavaEE/target/classes/static
+2022-06-20 21:54:51.277  INFO 10180 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 10180 (D:\Github\Java\JavaEE\target\classes started by wangfuming in D:\Github\Java\JavaEE)
+2022-06-20 21:54:51.277  INFO 10180 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 21:54:51.617  INFO 10180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-20 21:54:51.617  INFO 10180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-20 21:54:51.629  INFO 10180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-06-20 21:54:51.789  INFO 10180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-06-20 21:54:51.790  INFO 10180 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 21:54:51.791  INFO 10180 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 21:54:51.843  INFO 10180 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-20 21:54:51.843  INFO 10180 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 562 ms
+2022-06-20 21:54:52.053  INFO 10180 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-06-20 21:54:52.130  INFO 10180 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-20 21:54:52.145  INFO 10180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-06-20 21:54:52.151  INFO 10180 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.92 seconds (JVM running for 393.625)
+2022-06-20 21:54:52.155  INFO 10180 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 21:54:55.178  INFO 10180 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 10180 (D:\Github\Java\JavaEE\target\classes started by wangfuming in D:\Github\Java\JavaEE)
+2022-06-20 21:54:55.179  INFO 10180 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 21:54:55.542  INFO 10180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-20 21:54:55.542  INFO 10180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-20 21:54:55.557  INFO 10180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2022-06-20 21:54:55.716  INFO 10180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-06-20 21:54:55.717  INFO 10180 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 21:54:55.717  INFO 10180 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 21:54:55.755  INFO 10180 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-20 21:54:55.755  INFO 10180 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 572 ms
+2022-06-20 21:54:55.910  INFO 10180 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-06-20 21:54:55.957  INFO 10180 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-20 21:54:55.971  INFO 10180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-06-20 21:54:55.974  INFO 10180 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 0.847 seconds (JVM running for 397.449)
+2022-06-20 21:54:55.975  INFO 10180 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-20 21:56:01.205  INFO 4716 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Starting EeStudyApplication using Java 1.8.0_192 on HONOR-MAGICBOOK with PID 4716 (D:\Github\Java\JavaEE\target\classes started by wangfuming in D:\Github\Java\JavaEE)
+2022-06-20 21:56:01.207  INFO 4716 --- [restartedMain] com.example.eestudy.EeStudyApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-20 21:56:01.258  INFO 4716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-20 21:56:01.258  INFO 4716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-20 21:56:01.901  INFO 4716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-20 21:56:01.903  INFO 4716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-20 21:56:01.929  INFO 4716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-06-20 21:56:02.689  INFO 4716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-06-20 21:56:02.697  INFO 4716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-20 21:56:02.697  INFO 4716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-20 21:56:02.827  INFO 4716 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-20 21:56:02.827  INFO 4716 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1568 ms
+2022-06-20 21:56:03.758  INFO 4716 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-06-20 21:56:03.998  INFO 4716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-20 21:56:04.046  INFO 4716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-06-20 21:56:04.058  INFO 4716 --- [restartedMain] com.example.eestudy.EeStudyApplication   : Started EeStudyApplication in 3.294 seconds (JVM running for 4.232)
+2022-06-20 21:56:05.567  INFO 4716 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-20 21:56:05.568  INFO 4716 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-20 21:56:05.569  INFO 4716 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-20 21:56:05.617 ERROR 4716 --- [http-nio-8081-exec-1] c.e.eestudy.controller.UserController    : /D:/Github/Java/JavaEE/target/classes/static
+2022-06-20 21:56:58.037 ERROR 4716 --- [http-nio-8081-exec-2] c.e.eestudy.controller.UserController    : D:\Github\Java\JavaEE
+2022-06-20 21:56:58.038  INFO 4716 --- [http-nio-8081-exec-2] c.e.eestudy.controller.UserController    : 16546513928922209.png
+2022-06-20 21:56:58.039  INFO 4716 --- [http-nio-8081-exec-2] c.e.eestudy.controller.UserController    : .png
+2022-06-20 21:56:58.062  WARN 4716 --- [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.io.IOException: java.io.FileNotFoundException: D:\Github\Java\JavaEE\upload\d694cd9c-4a91-4077-a306-4583d75fd29a.png (系统找不到指定的路径。)]
+2022-06-20 21:58:01.039 ERROR 4716 --- [http-nio-8081-exec-4] c.e.eestudy.controller.UserController    : D:\Github\Java\JavaEE
+2022-06-20 21:58:01.040  INFO 4716 --- [http-nio-8081-exec-4] c.e.eestudy.controller.UserController    : 16546513928922209.png
+2022-06-20 21:58:01.041  INFO 4716 --- [http-nio-8081-exec-4] c.e.eestudy.controller.UserController    : .png

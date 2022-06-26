@@ -1,7 +1,10 @@
 package tree;
 
 import node.AVLNode;
+import node.TreeNode;
 
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.TreeMap;
 
 public class AVLTree {
@@ -96,41 +99,6 @@ public class AVLTree {
         }
     }
 
-//    private void siftDel(AVLNode parent){
-//        AVLNode cur=null;
-//        while(parent!=null){
-//            if(parent.bf==0){
-//                cur=parent;
-//                parent=parent.parent;
-//                if(parent!=null){
-//                    if(cur==parent.left){
-//                        parent.bf--;
-//                    }else{
-//                        parent.bf++;
-//                    }
-//                }
-//            }else if(Math.abs(parent.bf)==1){
-//                break;
-//            }else{
-//                if(parent.bf==2) {
-//                    if(parent.left.bf==1){
-//                        rightRotation(parent);
-//                    }else{
-//                        leftRotation(parent.left);
-//                        rightRotation(parent);
-//                    }
-//                } else{
-//                    if(parent.right.bf==-1){
-//                        leftRotation(parent);
-//                    }else{
-//                        rightRotation(parent.right);
-//                        rightRotation(parent);
-//                    }
-//                }
-//                break;
-//            }
-//        }
-//    }
 private void siftDel(AVLNode parent){
     AVLNode cur=null;
     while(parent!=null){
@@ -209,70 +177,6 @@ private void siftDel(AVLNode parent){
         left.bf=getBF(left);
     }
 
-    public void remove(int key){
-        if(root==null) {
-            return;
-        }
-        AVLNode cur=search(root,key);
-        if(cur==null){
-            return;
-        }
-        AVLNode parent=cur.parent;
-        if(cur.right==null&&cur.left==null){
-            if(parent==null){
-                root=null;
-            }else if(cur==parent.left){
-                parent.left=null;
-                parent.bf--;
-            }else{
-                parent.right=null;
-                parent.bf++;
-            }
-            cur.parent=null;
-            siftDel(parent);
-        }else if(cur.left==null){
-            if(parent==null){
-                root=cur.right;
-                cur.right.parent=root;
-            }else if(parent.left==cur){
-                parent.left=cur.right;
-                parent.bf--;
-            }else{
-                parent.right=cur.right;
-                parent.bf++;
-            }
-            cur.parent=null;
-            siftDel(parent);
-        }else if(cur.right==null){
-            if(parent==null){
-                root=cur.left;
-                cur.left.parent=root;
-            }else if(parent.left==cur){
-                parent.left=cur.left;
-                parent.bf--;
-            }else{
-                parent.right=cur.left;
-                parent.bf++;
-            }
-            cur.parent=null;
-            siftDel(parent);
-        }else{
-            AVLNode minNode=getMin(cur);
-            remove(minNode.val);
-            minNode.right=cur.right;
-            minNode.left=cur.left;
-            minNode.bf=cur.bf;
-            minNode.parent=cur.parent;
-            if(parent==null){
-                root=minNode;
-            }else if(cur==parent.left){
-                parent.left=minNode;
-            }else{
-                parent.right=minNode;
-            }
-        }
-    }
-
     public void inorder(AVLNode root){
         if(root==null){
             return;
@@ -282,14 +186,30 @@ private void siftDel(AVLNode parent){
         inorder(root.right);
     }
 
-    private AVLNode getMin(AVLNode root){
+
+    public void leverOrder(AVLNode root){
         if(root==null){
-            return null;
+            return;
         }
-        while(root.left!=null){
-            root=root.left;
+        Deque<AVLNode> queue = new LinkedList<>();
+        queue.offer(root);
+        int lever = 1;
+        while(!queue.isEmpty()){
+            System.out.print("第"+lever+"层:");
+            int size = queue.size();
+            for(int i = 0; i < size; i++){
+                AVLNode tmp = queue.poll();
+                System.out.print(tmp.val+ " " +tmp.bf+"   ");
+                if(tmp.left!=null) {
+                    queue.offer(tmp.left);
+                }
+                if(tmp.right!=null) {
+                    queue.offer(tmp.right);
+                }
+            }
+            lever++;
+            System.out.println();
         }
-        return root;
     }
     public static void main(String[] args) {
         AVLTree avlTree=new AVLTree();
@@ -315,9 +235,7 @@ private void siftDel(AVLNode parent){
         avlTree.insert(93);
         avlTree.inorder(avlTree.root);
         System.out.println("-----------------------");
-//        avlTree.remove(15);
-//        avlTree.inorder(avlTree.root);
+        avlTree.leverOrder(avlTree.root);
         System.out.println();
-//        TreeMap
     }
 }
