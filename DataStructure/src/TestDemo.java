@@ -60,7 +60,7 @@ public class TestDemo {
         myCircularQueue.enQueue(11);
         System.out.println(myCircularQueue.Rear());
     }
-    public static void main(String[] args) {
+    public static void main6(String[] args) {
         OperationTree operationTree=new OperationTree();
         BSTree bst=new BSTree();
         bst.insert(5);
@@ -146,10 +146,10 @@ public class TestDemo {
         System.out.println(myQueue.poll());
 
     }
-    public static void main2(String[] args) {
+    public static void main(String[] args) {
         MySort mySort=new MySort();
         Random random = new Random();
-        int[] nums1=new int[10_0000];
+        int[] nums1=new int[30_0000];
         for(int i=0;i< nums1.length;i++){
             nums1[i]= random.nextInt(10_0000);
         }
