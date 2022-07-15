@@ -73,7 +73,7 @@ public class ThreadDemo10 {
             for (int i = 0; i < 10000; i++) {
                 try {
                     blockingQueue.put(i);
-                    System.out.println("生产元素: " + i);
+                    System.out.println("生产元素: " + i + "    size:" + blockingQueue.size);
                     Thread.sleep(0);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -86,7 +86,7 @@ public class ThreadDemo10 {
             while (true) {
                 try {
                     int ret = blockingQueue.take();
-                    System.out.println("消费元素: " + ret);
+                    System.out.println("消费元素: " + ret + "   size:" + blockingQueue.size);
                     Thread.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

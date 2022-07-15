@@ -1,8 +1,31 @@
 package oop;
 
+import java.io.FilterOutputStream;
+import java.util.HashSet;
+
 public class TestClass {
+    private int val;
+    public TestClass(){}
+    public TestClass(int val){
+        this.val = val;
+    }
 
     public static void main(String[] args) {
+    }
+    //为什么重写equals要重写hashcode
+    public static void main4(String[] args) {
+        TestClass testClass = new TestClass(1);
+        TestClass testClass1 = new TestClass(1);
+        System.out.println(testClass1.hashCode());
+        System.out.println(testClass.hashCode());
+        HashSet<TestClass> set = new HashSet<>();
+        set.add(testClass1);
+        set.add(testClass);
+        System.out.println(set.size());
+        System.out.println(testClass1.equals(testClass));
+    }
+
+    public static void main3(String[] args) {
         Animal cat=new Cat("小黑");
         cat.eat("mouse");
         Cat cat1=new Cat("圆圆");
@@ -24,5 +47,17 @@ public class TestClass {
         cat.eat("猫粮");
         Bird bird = new Bird("圆圆");
         bird.fly();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this==obj) {
+            return true;
+        }
+        if(obj == null || getClass() != obj.getClass()){
+            return false;
+        }
+        TestClass t = (TestClass)obj;
+        return this.val == t.val;
     }
 }
