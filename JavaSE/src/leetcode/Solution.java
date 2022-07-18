@@ -3,10 +3,37 @@ package leetcode;
 import java.util.*;
 
 public class Solution {
-
-
-
     public static void main(String[] args) {
+        int[][] isInfected = {{0,1,0,0,0,0,0,1},{0,1,0,0,0,0,0,1},{0,0,0,0,0,0,0,1},{0,0,0,0,0,0,0,0}};
+        Solution solution = new Solution();
+        int ans = solution.containVirus(isInfected);
+        System.out.println(ans);
+    }
+    public int containVirus(int[][] isInfected) {
+        int ans = 0;
+        for(int i = 0; i < isInfected.length;i++){
+            for(int j = 0; j < isInfected[0].length; j++){
+                if(isInfected[i][j]==1){
+                    if(i-1>=0&&isInfected[i-1][j]==0){
+                        ans++;
+                    }
+                    if(i+1<isInfected.length&&isInfected[i+1][j]==0){
+                        ans++;
+                    }
+                    if(j-1>=0&&isInfected[i][j-1]==0){
+                        ans++;
+                    }
+                    if(j+1<isInfected[0].length&&isInfected[i][j+1]==0){
+                        ans++;
+                    }
+                }
+            }
+        }
+        return ans;
+    }
+
+
+    public static void main7(String[] args) {
         char[] task={'A','A','A','B','B','B'};
         Solution solution=new Solution();
         int ret= solution.leastInterval(task,2);
