@@ -1,9 +1,67 @@
 package leetcode;
 
+import javax.swing.tree.TreeNode;
 import java.util.*;
 
 public class Solution {
+
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode() {}
+        TreeNode(int val) { this.val = val; }
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+    public void preorder(TreeNode root){
+        if(root==null) {
+            return;
+        }
+        System.out.print(root.val+" ");
+        preorder(root.left);
+        preorder(root.right);
+    }
     public static void main(String[] args) {
+        int[] preorder = {1,2,4,5,3,6,7};
+        int[] postorder = {4,5,2,6,7,3,1};
+        Solution solution = new Solution();
+        TreeNode root = solution.constructFromPrePost(preorder,postorder);
+        solution.preorder(root);
+    }
+    private int preIndex;
+    public TreeNode constructFromPrePost(int[] preorder, int[] postorder) {
+        preIndex = 0;
+        return constructFromPrePost(preorder,postorder,0,postorder.length-1);
+    }
+    private TreeNode constructFromPrePost(int[] preorder,int[] postorder,int l,int r){
+        if(l>r) {
+            return null;
+        }
+        TreeNode root = new TreeNode(preorder[preIndex++]);
+        if(preIndex>=preorder.length){
+            return root;
+        }
+        int index = findElem(postorder,preorder[preIndex],l,r-1);
+        if(index==-1){
+            return root;
+        }
+        root.left = constructFromPrePost(preorder,postorder,l,index);
+        root.right = constructFromPrePost(preorder,postorder,index+1,r-1);
+        return root;
+    }
+    private int findElem(int[] postorder,int num,int l,int r){
+        for(int i = l; i <= r; i++){
+            if(postorder[i]==num){
+                return i;
+            }
+        }
+        return -1;
+    }
+    public static void main8(String[] args) {
         int[][] isInfected = {{0,1,0,0,0,0,0,1},{0,1,0,0,0,0,0,1},{0,0,0,0,0,0,0,1},{0,0,0,0,0,0,0,0}};
         Solution solution = new Solution();
         int ans = solution.containVirus(isInfected);
