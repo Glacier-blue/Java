@@ -5,6 +5,92 @@ import java.util.*;
 
 public class Solution {
 
+    public static void main(String[] args) {
+        String equation = "x+5-3+x=6+x-2";
+        Solution solution = new Solution();
+        String ans = solution.solveEquation(equation);
+        System.out.println(ans);
+    }
+    private final String ANS1 =  "No solution";
+    private final String ANS2 = "Infinite solutions";
+    public String solveEquation(String equation) {
+        String[] equ = equation.split("=");
+        int[] ansleft = getParam(equ[0]);
+        int[] ansright = getParam(equ[1]);
+        int leftX = ansleft[1];
+        int leftNum = ansleft[0];
+        int rightX = ansright[1];
+        int rightNum = ansright[0];
+        int a = leftX - rightX;
+        int b = rightNum - leftNum;
+        if(a==0&&b==0){
+            return ANS2;
+        }else if(a==0&&b!=0){
+            return ANS1;
+        }else{
+            return "x=" + b/a;
+        }
+    }
+    private int[] getParam(String s){
+        int[] arr = new int[2];// 0 数字系数，1方程系数
+        int i = 0;
+        int j = 0;
+        boolean flag = true;
+        while(i<s.length()){
+            int num = 0;
+            boolean cnt = false;
+            j=i;
+            while(j<s.length()){
+                char c = s.charAt(i);
+                if(c=='x'){
+                    if(num==0&&cnt==false){
+                        num = 1;
+                    }
+                    if(flag){
+                        arr[1] += num;
+                    }else{
+                        arr[1] -= num;
+                    }
+                    j++;
+                    i=j;
+                    break;
+                }else if(c =='-'){
+                    if(flag){
+                        arr[0] += num;
+                    }else{
+                        arr[0] -= num;
+                    }
+                    j++;
+                    i=j;
+                    flag = false;
+                    break;
+                }else if(c=='+'){
+                    if(flag){
+                        arr[0] += num;
+                    }else{
+                        arr[0] -= num;
+                    }
+                    j++;
+                    i=j;
+                    flag = true;
+                    break;
+                }else{
+                    num = num*10 + c - '0';
+                    cnt = true;
+                    if(j==s.length()-1){
+                        if(flag){
+                            arr[0] += num;
+                        }else{
+                            arr[0] -= num;
+                        }
+                    }
+                    j++;
+                    i=j;
+                }
+            }
+        }
+        return arr;
+    }
     class TreeNode {
         int val;
         TreeNode left;
@@ -25,7 +111,7 @@ public class Solution {
         preorder(root.left);
         preorder(root.right);
     }
-    public static void main(String[] args) {
+    public static void main9(String[] args) {
         int[] preorder = {1,2,4,5,3,6,7};
         int[] postorder = {4,5,2,6,7,3,1};
         Solution solution = new Solution();
