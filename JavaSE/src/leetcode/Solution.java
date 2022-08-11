@@ -4,8 +4,58 @@ import javax.swing.tree.TreeNode;
 import java.util.*;
 
 public class Solution {
-
     public static void main(String[] args) {
+        String s = "a0b1c2";
+        String ans = new Solution().reformat(s);
+        System.out.println(ans);
+    }
+    public String reformat(String s) {
+        int[] nums = new int[10];
+        int[] chars = new int[26];
+        int p1 = 0;
+        int p2 = 0;
+        int cnt1 = 0;
+        int cnt2 = 0;
+        for(int i = 0; i < s.length(); i++){
+            if(s.charAt(i)>='0'&&s.charAt(i)<='9'){
+                nums[s.charAt(i)-'0']++;
+                cnt1++;
+            }else{
+                chars[s.charAt(i)-'a']++;
+                cnt2++;
+            }
+        }
+        if(Math.abs(cnt1-cnt2)>1){
+            return "";
+        }
+        StringBuilder sb = new StringBuilder();
+        boolean flag = true;//插入数字
+        if(cnt1<cnt2){
+            flag = false;//插入字符串
+        }
+        while(p1<=9||p2<=25){
+            if(flag){
+                while(p1<=9&&nums[p1]<=0){
+                    p1++;
+                }
+                if(p1>=10) break;
+                sb.append(p1);
+                nums[p1]--;
+                flag = false;
+            }else{
+                while(p2<=25&&chars[p2]<=0){
+                    p2++;
+                }
+                if(p2>=26) break;
+                char ch = (char)(p2+97);
+                sb.append(ch);
+                chars[p2]--;
+                flag = true;
+            }
+        }
+        return sb.toString();
+    }
+    public static void main10(String[] args) {
         String equation = "x+5-3+x=6+x-2";
         Solution solution = new Solution();
         String ans = solution.solveEquation(equation);
