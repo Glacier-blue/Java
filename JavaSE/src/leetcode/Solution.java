@@ -4,7 +4,35 @@ import javax.swing.tree.TreeNode;
 import java.util.*;
 
 public class Solution {
+
     public static void main(String[] args) {
+        int[] arr = {3,3,3,3,3,1,3};
+        Solution solution = new Solution();
+        List<List<Integer>> ans = solution.groupThePeople(arr);
+        System.out.println(ans);
+    }
+
+    public List<List<Integer>> groupThePeople(int[] groupSizes) {
+        List<List<Integer>> ans = new ArrayList<>();
+        Map<Integer,List<Integer>> map = new HashMap<>();
+        for(int i = 0; i < groupSizes.length; i++){
+            int num = groupSizes[i];
+            List<Integer> tmp = map.get(num);
+            if(tmp==null){
+                tmp = new ArrayList<>();
+                ans.add(tmp);
+                map.put(num,tmp);
+            }
+            if(tmp.size()==num){
+                tmp = new ArrayList<>();
+                ans.add(tmp);
+                map.put(num,tmp);
+            }
+            tmp.add(i);
+        }
+        return ans;
+    }
+    public static void main11(String[] args) {
         String s = "a0b1c2";
         String ans = new Solution().reformat(s);
         System.out.println(ans);

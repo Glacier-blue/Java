@@ -53,5 +53,8 @@
         select u.*,a.id a_id,a.title a_title,a.content a_content,a.createtime a_createtime
         from user u left join article a on a.uid=u.id where u.id=#{id}
     </select>
+    <select id="login" resultType="com.example.eestudy.model.User">
+        select * from user where username = #{username} and password = ${password}
+    </select>
 
 </mapper>

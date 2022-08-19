@@ -8,6 +8,7 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper {
+    List<User> login(User user);
     int add(User user);
     User selectById(int id);
     //多个参数需要保证映射一致，不一致可以使用@Param实现一致

@@ -73,4 +73,13 @@ class UserMapperTest {
         User user=userMapper.getFullUser(id);
         System.out.println(user);
     }
+
+    @Test
+    void login() {
+        User user = new User();
+        user.setUsername("wfm");
+        user.setPassword("null or 1 = 1");
+        List<User> ans = userMapper.login(user);
+        System.out.println(ans);
+    }
 }

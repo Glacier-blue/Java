@@ -10,6 +10,27 @@ import tree.OperationTree;
 import java.util.*;
 
 public class TestDemo {
+    public static void main(String[] args) {
+        TreeNode  A = new TreeNode(1);
+        TreeNode  B = new TreeNode(2);
+        TreeNode  C = new TreeNode(3);
+        TreeNode  D = new TreeNode(4);
+        A.left = B;
+        B.left = C;
+        C.left = D;
+        OperationTree operationTree = new OperationTree();
+        operationTree.preorder(A);
+        operationTree.postorder(A);
+        TreeNode  Q = new TreeNode(5);
+        TreeNode  W = new TreeNode(6);
+        TreeNode  E = new TreeNode(7);
+        TreeNode  R = new TreeNode(8);
+        Q.right = W;
+        W.right = E;
+        E.right = R;
+        operationTree.preorder(Q);
+        operationTree.postorder(Q);
+    }
     public static void main8(String[] args) {
         HashBucket<Integer,Integer> hashBucket=new HashBucket<>();
         hashBucket.put(1,1);
@@ -146,7 +167,7 @@ public class TestDemo {
         System.out.println(myQueue.poll());
 
     }
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         MySort mySort=new MySort();
         Random random = new Random();
         int[] nums1=new int[30_0000];
