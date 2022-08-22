@@ -10,7 +10,7 @@ import tree.OperationTree;
 import java.util.*;
 
 public class TestDemo {
-    public static void main(String[] args) {
+    public static void main9(String[] args) {
         TreeNode  A = new TreeNode(1);
         TreeNode  B = new TreeNode(2);
         TreeNode  C = new TreeNode(3);
@@ -61,7 +61,7 @@ public class TestDemo {
         System.out.println(hashBucket.get(23));
 
     }
-    public static void main7(String[] args) {
+    public static void main(String[] args) {
         MyCircularQueue myCircularQueue=new MyCircularQueue(10);
         System.out.println(myCircularQueue.isEmpty());
         myCircularQueue.enQueue(1);
