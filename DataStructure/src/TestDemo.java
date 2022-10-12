@@ -10,6 +10,40 @@ import tree.OperationTree;
 import java.util.*;
 
 public class TestDemo {
+    private static void RNL(TreeNode root){
+        if(root==null){
+            return;
+        }
+        RNL(root.right);
+        System.out.print(root.val + " ");
+        RNL(root.left);
+    }
+    private static  void RLN(TreeNode root){
+        if(root==null){
+            return;
+        }
+        RLN(root.right);
+        RLN(root.left);
+        System.out.print(root.val + " ");
+    }
+    public static void main(String[] args) {
+        TreeNode A = new TreeNode(1);
+        TreeNode B = new TreeNode(2);
+        TreeNode C = new TreeNode(3);
+        TreeNode D = new TreeNode(4);
+        TreeNode E = new TreeNode(5);
+        TreeNode F = new TreeNode(6);
+        TreeNode G = new TreeNode(7);
+        A.left = B;
+        A.right = C;
+        B.left = D;
+        C.left = E;
+        E.left = F;
+        E.right = G;
+        RNL(A);
+        System.out.println();
+        RLN(A);
+    }
     public static void main9(String[] args) {
         TreeNode  A = new TreeNode(1);
         TreeNode  B = new TreeNode(2);
@@ -61,7 +95,7 @@ public class TestDemo {
         System.out.println(hashBucket.get(23));
 
     }
-    public static void main(String[] args) {
+    public static void main7(String[] args) {
         MyCircularQueue myCircularQueue=new MyCircularQueue(10);
         System.out.println(myCircularQueue.isEmpty());
         myCircularQueue.enQueue(1);
@@ -172,7 +206,8 @@ public class TestDemo {
         Random random = new Random();
         int[] nums1=new int[30_0000];
         for(int i=0;i< nums1.length;i++){
-            nums1[i]= random.nextInt(10_0000);
+//            nums1[i]= random.nextInt(10_0000);
+            nums1[i] = i+1;
         }
         int[] nums2=nums1.clone();
         int[] nums3=nums1.clone();
